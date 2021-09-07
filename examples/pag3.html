@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi formulario</title>
+	<meta charset="utf-8">
+</head>
+<header>
+	<h1 style="color: blue">Haz entrado a la pagina 3</h1>
+	<h2 style="color: blue">Mi formulario:</h2>
+</header>
+<body>
+	<form method="post"> <!--El atributo method define con qué método HTTP se envían los datos (generalmente get o post. La diferencia entre los métodos get y post radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método GET envía los datos usando la URL, el método POST los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).-->
+		<p>Nombre:</p><input type="text" name="nombre" required="">
+		<p>Edad:</p><input type="number" name="edad" required="">
+		<p>Email:</p><input type="email" name="mail" required="">
+		<p>Contraseña:</p><input type="password" name="pass" required="">
+		<!--<input type="button" name="boton">-->
+		<br><br><p>Asunto:</p><textarea></textarea>
+		<br><br><input type="submit">
+	</form>
+</body>
+<footer>
+	<br>
+	<a href="../index.html"><b>Página principal</b></a>
+</footer>
+</html>
