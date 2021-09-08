@@ -2,22 +2,32 @@
 <html>
 <head>
 	<title>Mi primera Pagina Web</title>
+		<!-- los metadatos son elementos HTML que tienen como función describir la página web que los contiene. Estos son usados por los motores de búsqueda para hacer un análisis de dicho sitio web en cuanto a qué tipo de contenido se ofrece y cuál es la temática que allí se maneja.-->
 	<meta charset="utf-8"> <!--codificacion universal-->
+	<meta name="keywords" content="ejemplos, implementos, HTML5">
+	<meta name="description" content="Pagina destinada para obserbar las diversad impekmentacion de HTML5 a traves de varios ejemplos.">
+	<meta name="author" content="Eliezer Zúñiga">
+	<meta name="copyright" content="EZ Inc.">
+	<meta name="robots" name="index"><!--es para decirle a la pagina si es indexale(index) o no(noindex). Es decir, si debe o no salir en la lista de buqueda de un navegador.-->
 </head>
 <header>
+	<p style="text-align: center; margin-left: 1100px">Haz <a href="https://google.com" target="_BLANK">click aqui</a> para redirigir a Google </p><!--_BLANK para indicar que la página de destino hacia la que apunta se abra en otra ventana del navegador.-->
 	<h1 style="color: blue">Bienvenido!!</h1>
-	<h2 id = "Descripcion" style="color: blue">Descripción:</h2>
-	<p style="text-align: center; margin-right: 700px"><b><i>La página se enfoca en mostrar ejemplos utilizando implementos de HTML5</i></b></p>
 	<br>
 </header>
 <body>
+	<h2 id = "Descripcion" style="color: blue">Descripción:</h2>
+	<p style="text-align: center; margin-right: 700px"><b><i>La página se enfoca en mostrar ejemplos utilizando implementos de HTML5</i></b></p>
+	<br>
 	<h3 style="color: green">Lista de ejemplos:</h3>
-	<ol>
-		<li><b>Mi lista de compras</b>	<a href="examples/pag1.html" style="color: red">Ir a página 1</a></li>
-		<li><b>Mi video</b>             <a href="examples/pag2.html" style="color: red">Ir a página 2</a></li>
-		<li><b>Mi formulario</b>        <a href="examples/pag3.html" style="color: red">Ir a página 3</a></li>
-		<li></li>
-	</ol>
+	<nav><!---<nav> representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos.-->
+		<ol>
+			<li><b>Mi lista de compras</b>	<a href="examples/pag1.html" style="color: red">Ir a página 1</a></li>
+			<li><b>Mi video</b>             <a href="examples/pag2.html" style="color: red">Ir a página 2</a></li>
+			<li><b>Mi formulario</b>        <a href="examples/pag3.html" style="color: red">Ir a página 3</a></li>
+			<li></li>
+		</ol>
+	</nav>
 	<!--<script src="source.js"></script>-->
 	<!--<h2>papajhons</h2>-->
 	<!--<p> kameeeeekameeeeeehaaaaaaaaaaaa</p>-->
@@ -31,8 +41,17 @@
 	<!--<script type="text/javascript">
 		alert('hola')
 	</script>-->
+	
 </body>
 <footer>
-	<p>Haz <a href="https://google.com" target="_BLANK">click aqui</a> para redirigir a Google</p><!--_BLANK para indicar que la página de destino hacia la que apunta se abra en otra ventana del navegador.-->
+	<br>
+	<p style="color: darkred">Sigueme en:</p>
+	<nav>
+		<ul>
+			<li><a href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a></li>
+			<li><a href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a></li>
+		</ul>
+	</nav>
+	<p style="color: darkred">Contactame a mi email: <i style="color: black">elizerittf@gmail.com</i></p>
 </footer>
 </html>
