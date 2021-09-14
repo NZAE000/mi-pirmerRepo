@@ -1,0 +1,213 @@
+/*Estilo en cascada:
+	
+		jerarquia:				!important
+								estilo en linea
+								identificadores	(id)
+								clases			(class)
+								pseudo-clases   (ej: hover)
+								atributos		
+								elementos
+								pseudo-elementos
+
+		conceptos:				*Responsive-design: adaptar la pagina a distintos dispositivos: moviles, pc, tablets, etc.
+								*Medidas fijas(absolutas): cm, mm, pt, in, pc. Son aquellas que especifican una medida en términos absolutos, sin tener en cuenta el contexto donde se están aplicando.
+								*Medidas relativas:
+													%: porcentaje (depende de la caja que contiene tal elemnto)
+													em: Altura de la fuente
+													rem: Root-em
+													vw: Viewport width
+													vh: Viewport Height
+													vmin: Viewport menor, entre altura o anchura
+													vmax: Viewport mayor, entre altura o anchura
+													ex: anchura de la fuente para la letra "x"
+													ch: la anchura del carácter "0" (cero)
+
+										Las unidades relativas de CSS son aquellas que tienen en cuenta el contexto donde se encuentran. Son relativas a las dimensiones del contenedor donde se han definido.
+
+								*BOX-MODEL:
+										-line-height: modifica el contenido.
+										-diplay:
+											inline: el elemento se renderizará en línea con otros elementos.
+											block: hace que el comportamiento del elemento sea como un bloque. Los elementos hijos en block se adecuan al tamaño de la caja del padre.
+										
+										-box-sizing:
+											border-box: Al cambiar de tamaño de alguna caja (ej: widht, height), no considera si el contenido tiene algun borde (border) o relleno (padding). 
+											content-box: Si es que el contenido tiene borde o relleno, los considera al momento aplicar cambios de tamaño de la caja.
+
+										-box-shadow: para la sombra. Parametros: (px(en X), px(en Y), px(desenfoque)), px(grosor borde), color).
+
+										-padding:
+												Para separar la distancia entre el contenido y los bordes de su caja. 
+												Separacion en top, right, bottom y left (parametricamente funciona ej: padding: 10px 10px 20px 20px;)
+										-border:
+											
+											border-radius: para redondear las esquinas de la box.
+											border-top-width, border-right-width, border-botton-width, border-left-width: aumentar grosor;
+											border color: para el color deborde.
+											etc..
+											Para simplificar estas propíedades en border:
+												border: grosor(general) estilo(solid, dashed, double, groove, ridge, inset, outset) color;
+											
+
+										-margin:
+												Para separar distancia entre una box a otra. Tales son top, right, bottom y left (parametricamente funciona ej: margin: 10px 10px 20px 20px)
+
+										-position:
+											static: los elementos se posicionan de acuerdo al flujo normal de la página. Es la posición natural de los elementos. No son afectados por las propiedades top, bottom, left y right.
+											relative: los elementos se posicionan de forma relativa a su posición normal.
+											fixed: los elementos se posicionan de forma relativa a la ventana del navegador. Su posición permanece fija aunque se desplace la ventana.
+											absolute: los elementos se posicionan de forma relativa al primer elemento padre que tenga una posición distinta a static.
+
+
+*/
+
+/**{ 							'*' selector universal, osea selecciona todos los elementos del html.
+	color: red;
+}*/
+
+/*h2, h3, ol, etc.. {			selector por elemento.
+	color: red;
+}*/
+
+/*.lista-ejemplos{				selector por clase (usad cuando un etiqueta padre otorgue una propiedad que compartan todas sus etiquetas hijas).
+	color: green;
+}*/
+
+/*#Descripcion{		     		selector por id (el valor de id debe ser unico para un elemento(tratar de no usar mas elementos con el mismo valor de id)).
+	color: yellow;
+}*/
+
+
+/*li[id="index-pag2"]{			selector por atributo (cuando varias etiquetas comparten "el mismo nombre de atributo", pero refiriendose a tal con un valor en particular)
+	color: pink;
+}*/
+
+*{
+	font-family: 'Comfortaa', cursive;	/*Tipografía*/
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+header{
+	width: 100vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
+	height: 10vh;
+	background-color: #055;
+}
+header a{
+	font-size: 3em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
+	position: relative; left: 1250px; top: 13px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px 5px #045;
+	color: #87ceeb;	
+}
+
+header a:hover{
+	font-size: 3.1em; 
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+body{
+	background-color: #5aeeeb;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+h1{
+	display: inline-block; 		/*se comporta como un elemento en linea, pero adquiere las propiedades de un elemento en bloque*/	
+	width: 500px;				/*aumento del ancho de la caja(tambien con height)*/
+	padding-left: .5em;
+	color:#045;
+	font-size: 4.5em;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+h2{
+	color: #045;
+	font-size: 2.5em;
+	margin: 0.4em 0;
+	padding-left: .3em;
+}
+#Descripcion{
+	line-height: 12vh;
+	text-align: center;
+}
+#Descripcion p{
+	color: #059;
+}
+#Descripcion p a{		   		/*selector por descendiente(de tal elemento con id(y tambien posible por clase) selecciono un hijo(en su ambito {}) y asi ..)*/
+	color: #069;
+} 
+#Descripcion p a:hover{		   	/*:hover = pseudo-clase*/
+	font-size: 1.07em;
+	color: #0809;
+} 
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+h3{
+	padding-left: 2.5em;
+	font-size: 25px; 
+	color: #055;
+}
+#lista_ejem{
+	display: inline-block;
+	position: relative; left: 20vw;
+	margin-top: 2vh;
+}
+.ejem__index a{
+	color: #059;
+	font-size: 20px; 			/*para todos sus nodos hijos, el font size para la medida relativa 1em= 16px*/
+	line-height: 1.5;			/*las letras por defecto ocupan 1 line-height, osea 0.5 hacia arriba y hacia abajo de 'ESPACIO' (su caja) desde 'el centro de cada letra'(osea el espacio por defecto que ocpupa la letra). En este caso le decimos que ocupe 0.6*/
+	border-radius: 3px;
+}
+.ejem__index a:hover{ 				
+	color: #0809;
+	font-size: 1.5em; 			/*la unidad em es escalable y siempre depende de su elemento padre. Como lista_ejem es la caja padre, entonces para la propiedad font-size, 1em = 16px*/
+	font-weight: 800;
+}
+/*.ejem__index--active{ para darle propiedades solo a la etiqueta de esa clase que tiene el posfijo --active en html(se puede cambiar el posfijo a otras etiqueta manipulando con js).
+	color: #059;
+}*/
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+footer{
+	background-color: #055;
+	width: 100vw;
+	height: 10vh;
+	position: relative; top: 11vh;;
+}
+footer p1,p2{
+	color:orange;
+	line-height: 2;
+}
+#redes-sociales{
+	display: inline;
+	position: relative; left: 65vw;
+}
+.contacto{
+	display: inline-block;
+	font-family: Century Gothic;
+	color: white;	
+	width: 80px;
+	margin-left: 2vw;
+}
+.contacto:hover{
+	color: gold;
+}
+footer p1{
+	position: relative; left: 65vw;
+}
+footer p2{
+	display: block;
+	width: 400px;
+	position: relative; left: 65vw;
+}
+footer p2 i{
+	position: relative; left: 20px;
+	color: brown;
+	font-family: Century Gothic;
+}
+
