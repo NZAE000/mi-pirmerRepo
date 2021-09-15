@@ -4,43 +4,53 @@
 	<title>Lista de compras</title>
 	<link rel="stylesheet" type="text/css" href="../styles/normalize.css"> <!--normalize(quitar la configuracion de propiedades del navegador y dejar una por defecto)-->
 	<link rel="stylesheet" type="text/css" href="../styles/stylepg1.css">
+	<!----------------------------------font-family--------------------------------------------------------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+	<!------------------------------------------------------------------------------------------------------>
 	<link rel="icon" href="../icon/EZ.ico">
 	<meta charset="utf-8"> <!--codificacion universal-->
 </head>
 <header>
-	<a href="../index.html" style="text-align: center; margin-left: 1300px"><b>Página principal</b></a>
+	<a href="../index.html"><b>Página principal</b></a>
 </header>
 <body>
-	<h1>Haz entrado a la pagina 1</h1>
-	<h2>Lista de compras:</h2>
-	<div> <!--"ETIQUETA div para separa y agrupar contenido"-->
-		<h3>Compra en el Santa Isabel
+	<h1>Lista de compras</h1>
+	<div id="lista-santa"> <!--"ETIQUETA div para separa y agrupar contenido"-->
+		<div class="logo">
 			<img src="../img/santa.png" alt="Logo de santa isabel" title="Supermercado">
-		</h3><!--"alt" para permitir proporcionar un texto equivalente al objeto, si esque nos e encuetra la imagen.-->
-		<ul><!--lista sin enumerar-->
-			<li>Leche</li>
-			<li>Café</li>
-			<li>Cacahuates</li>
-			<li>Avena</li>
-		</ul>
+		</div>
+		<div class="lista">
+			<h2 id = "h-santa">Compras en el Santa Isabel</h2><!--"alt" para permitir proporcionar un texto equivalente al objeto, si esque nos e encuetra la imagen.-->
+			<ul id = "l-santa"><!--lista sin enumerar-->
+				<li>Leche</li>
+				<li>Café</li>
+				<li>Cacahuates</li>
+				<li>Avena</li>
+			</ul>
+		</div>
 	</div>
-	<div>
-		<h3>Compra de productos para aprovechar cyberday 
-			<img src="../img/cyberday.png" alt="Logo de cyberday" title="Tienda online">
-		</h3>
-		<ol> <!--lista enumerada-->
-			<li>Sapatillas yezzy</li>
-			<li>Bata</li>
-			<li>Perfume versace</li>
-			<li>Jeans skinny</li>
-			<li>Calcetines adidas</li>
-			<li>Procesador e6700</li>
-		</ol>
+	<div id="lista-cyber">
+		<div class="logo">
+			<img src="../img/cyberday.png" alt="Logo de cyberday" title="Tienda online">	
+		</div>
+		<div class="lista">
+			<h2 id = "h-cyber">Compras para aprovechar Cyberday</h2>
+			<ul id = "l-cyber"> <!--lista enumerada-->
+				<li>Sapatillas yezzy</li>
+				<li>Bata</li>
+				<li>Perfume versace</li>
+				<li>Jeans skinny</li>
+				<li>Calcetines adidas</li>
+				<li>Procesador e6700</li>
+			</ul>
+		</div>
 	</div>
 </body>
 <footer>
-	<p1>Sigueme en:</p1>
 	<div id = "redes-sociales">
+		<p1>Sigueme en:</p1>
 		<a class = "contacto" href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a>
 		<a class = "contacto" href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a>
 	</div>

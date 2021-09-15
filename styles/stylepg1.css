@@ -1,0 +1,133 @@
+header{
+	width: 100vw;
+	height: 10vh;
+	background-color: #055;
+}
+header a{
+	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
+	position: relative; left: 1150px; top: 30px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
+	color: #069;	
+	text-shadow: 2px 2px 5px #87ceeb;
+}
+header a:hover{
+	font-size: 2.1em; 
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+h1{
+	text-align: center;
+	background: #9dd5ab;
+	outline: #9dd5ab solid 0.68em;
+	color:#045;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+#lista-santa{
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+	background: #e61a1a;
+	height: 22em;
+}
+.logo img[alt="Logo de santa isabel"]{
+	position: relative; left: 10vw; top: 8vh;
+	width: 15vw;
+	height: 25vh;
+}
+.lista h2[id="h-santa"]{
+	color:#660002;
+}
+.lista ul[id="l-santa"] li{
+	color:#330001;
+}
+
+/*Clases que utiliza lista-santa y lista-cyber----------------------------------------------------------------------*/
+
+.logo{
+	width: 40vw;
+	height: 40vh;
+}
+.lista{
+	width: 40vw;
+	height: 40vh;
+}
+.lista h2{
+	position: relative; top: 4vh;
+}
+.lista ul{
+	position: relative; left: 5vw; top: 10vh;
+}
+.lista ul li{
+	line-height: 2vw;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.logo img[alt="Logo de cyberday"]{
+	position: relative; left: 1vw; top: 3vh;
+	width: 42vw;
+	height: 25vh;
+}
+.lista h2[id="h-cyber"]{
+	color:#0f3d57;
+}
+.lista ul[id="l-cyber"] li{
+	color:#081e2c;
+}
+#lista-cyber{
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+	background: #2697d9;
+	height: 22em;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+footer{
+	background-color: #055;
+	width: 100vw;
+	height: 8.5vh;
+	position: relative;
+}
+
+footer p1,p2{
+	line-height: 2;
+	color:gold;
+}
+
+#redes-sociales{
+	display: inline-block;
+	width: 34.5vw;
+	position: relative;left: 65vw;
+}
+.contacto{
+	width: 80px;
+	margin-left: 2vw;
+	font-family: Century Gothic;
+	color: white;
+	text-shadow: 2px 2px 7px #fff;	
+}
+.contacto:hover{
+	color: gold;
+}
+footer p2{
+	display: block;
+	width: 38vw;
+	position: relative;left: 65vw;
+}
+footer p2 i{
+	position: relative; left: 20px;
+	color :brown;
+	text-shadow: 1px 1px 3px pink;
+	font-family: Century Gothic;
+}
+
+

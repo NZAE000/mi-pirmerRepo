@@ -82,14 +82,10 @@
 	color: pink;
 }*/
 
-*{
-	font-family: 'Comfortaa', cursive;	/*Tipografía*/
-}
-
 /*---------------------------------------------------------------------------------------------------------------*/
 
 header{
-	width: 98.8vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
+	width: 100vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
 	height: 10vh;
 	background-color: #055;
 }
@@ -98,7 +94,7 @@ header a{
 	position: relative; left: 1230px; top: 13px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
-	color: #87ceeb;	
+	color: #069;	
 	text-shadow: 2px 2px 5px #87ceeb;
 }
 
@@ -107,12 +103,9 @@ header a:hover{
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
-
 body{
-	background-color: #5aeeeb;
-
+	background-color: #9dd5ab;
 }
-
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h1{
@@ -134,6 +127,7 @@ h2{
 #Descripcion{
 	line-height: 12vh;
 	text-align: center;
+	text-shadow: 3px 3px 5px #87ceeb, 2px 2px 5px #87ceeb, 2px 2px 5px #87ceeb;
 }
 #Descripcion p{
 	color: #059;
@@ -187,20 +181,22 @@ h3{
 
 footer{
 	background-color: #055;
-	width: 98.8vw;
+	width: 100vw;
 	height: 8.5vh;
-	position: relative; top: 6vh;;
+	position: relative; top: 6vh;
 }
+
 footer p1,p2{
 	line-height: 2;
 	color:gold;
 }
+
 #redes-sociales{
-	display: inline;
-	position: relative; left: 65vw;
+	display: inline-block;
+	width: 34.5vw;
+	position: relative;left: 65vw;
 }
 .contacto{
-	display: inline-block;
 	width: 80px;
 	margin-left: 2vw;
 	font-family: Century Gothic;
@@ -210,19 +206,15 @@ footer p1,p2{
 .contacto:hover{
 	color: gold;
 }
-footer p1{
-	position: relative; left: 65vw;
-}
 footer p2{
 	display: block;
-	width: 400px;
-	position: relative; left: 65vw;
+	width: 38vw;
+	position: relative;left: 65vw;
 }
 footer p2 i{
 	position: relative; left: 20px;
 	color :brown;
 	text-shadow: 1px 1px 3px pink;
-
 	font-family: Century Gothic;
 }
 
