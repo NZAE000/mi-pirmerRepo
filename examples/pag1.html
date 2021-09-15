@@ -2,18 +2,21 @@
 <html>
 <head>
 	<title>Lista de compras</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css"> <!--normalize(quitar la configuracion de propiedades del navegador y dejar una por defecto)-->
+	<link rel="stylesheet" type="text/css" href="../styles/stylepg1.css">
 	<link rel="icon" href="../icon/EZ.ico">
 	<meta charset="utf-8"> <!--codificacion universal-->
 </head>
 <header>
-		<a href="../index.html" style="text-align: center; margin-left: 1300px"><b>Página principal</b></a>
-		<h1 style="color: blue">Haz entrado a la pagina 1</h1>
-		<h2 style="color: blue">Lista de compras:</h2>
+	<a href="../index.html" style="text-align: center; margin-left: 1300px"><b>Página principal</b></a>
 </header>
 <body>
-	<br>
-	<div style="width: 550px"> <!--"ETIQUETA div para separa y agrupar contenido"-->
-		<h3>Compra en el Santa Isabel <img src="../img/santa.png" align="right" alt="logo de santa isabel" title="Supermercado"></h3><!--"alt" para permitir proporcionar un texto equivalente al objeto, si esque nos e encuetra la imagen.-->
+	<h1>Haz entrado a la pagina 1</h1>
+	<h2>Lista de compras:</h2>
+	<div> <!--"ETIQUETA div para separa y agrupar contenido"-->
+		<h3>Compra en el Santa Isabel
+			<img src="../img/santa.png" alt="Logo de santa isabel" title="Supermercado">
+		</h3><!--"alt" para permitir proporcionar un texto equivalente al objeto, si esque nos e encuetra la imagen.-->
 		<ul><!--lista sin enumerar-->
 			<li>Leche</li>
 			<li>Café</li>
@@ -21,10 +24,11 @@
 			<li>Avena</li>
 		</ul>
 	</div>
-	<br>
-	<div style="width: 850px">
-		<h3>Compra de productos para aprovechar cyberday <img src="../img/cyberday.png" align="right" alt="logo de cyberday" title="Tienda online"></h3>
-		<ol><!--lista enumerada-->
+	<div>
+		<h3>Compra de productos para aprovechar cyberday 
+			<img src="../img/cyberday.png" alt="Logo de cyberday" title="Tienda online">
+		</h3>
+		<ol> <!--lista enumerada-->
 			<li>Sapatillas yezzy</li>
 			<li>Bata</li>
 			<li>Perfume versace</li>
@@ -35,14 +39,14 @@
 	</div>
 </body>
 <footer>
-	<br>
-	<p style="color: darkred">Sigueme en:</p>
-	<nav>
-		<ul>
-			<li><a href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a></li>
-			<li><a href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a></li>
-		</ul>
-	</nav>
-	<p style="color: darkred">Contactame a mi email: <i style="color: black">elizerittf@gmail.com</i></p>
+	<p1>Sigueme en:</p1>
+	<div id = "redes-sociales">
+		<a class = "contacto" href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a>
+		<a class = "contacto" href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a>
+	</div>
+	<p2>Contactame a mi email:
+		<i>> elizerittf@gmail.com <</i>
+	</p2>
+</footer>
 </footer>
 </html>

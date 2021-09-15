@@ -89,16 +89,17 @@
 /*---------------------------------------------------------------------------------------------------------------*/
 
 header{
-	width: 100vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
+	width: 98.8vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
 	height: 10vh;
 	background-color: #055;
 }
 header a{
 	font-size: 3em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: relative; left: 1250px; top: 13px;
+	position: relative; left: 1230px; top: 13px;
 	border-radius: 5px;
-	box-shadow: 3px 3px 10px 5px #045;
+	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	color: #87ceeb;	
+	text-shadow: 2px 2px 5px #87ceeb;
 }
 
 header a:hover{
@@ -109,6 +110,7 @@ header a:hover{
 
 body{
 	background-color: #5aeeeb;
+
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
@@ -124,10 +126,10 @@ h1{
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h2{
-	color: #045;
-	font-size: 2.5em;
 	margin: 0.4em 0;
 	padding-left: .3em;
+	color: #045;
+	font-size: 2.5em;
 }
 #Descripcion{
 	line-height: 12vh;
@@ -147,7 +149,9 @@ h2{
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h3{
+	height: 10vh;
 	padding-left: 2.5em;
+	padding-top: 1.5em;
 	font-size: 25px; 
 	color: #055;
 }
@@ -157,15 +161,23 @@ h3{
 	margin-top: 2vh;
 }
 .ejem__index a{
-	color: #059;
+	display: inline-block;
+	height: 35px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	font-size: 20px; 			/*para todos sus nodos hijos, el font size para la medida relativa 1em= 16px*/
-	line-height: 1.5;			/*las letras por defecto ocupan 1 line-height, osea 0.5 hacia arriba y hacia abajo de 'ESPACIO' (su caja) desde 'el centro de cada letra'(osea el espacio por defecto que ocpupa la letra). En este caso le decimos que ocupe 0.6*/
+	/*line-height: 2;			las letras por defecto ocupan 1 line-height, osea 0.5 hacia arriba y hacia abajo de 'ESPACIO' (su caja) desde 'el centro de cada letra'(osea el espacio por defecto que ocpupa la letra). En este caso le decimos que ocupe 0.6*/
 	border-radius: 3px;
+	color: #059;
+	box-shadow: 2px 2px 10px 1px #045;
 }
 .ejem__index a:hover{ 				
-	color: #0809;
 	font-size: 1.5em; 			/*la unidad em es escalable y siempre depende de su elemento padre. Como lista_ejem es la caja padre, entonces para la propiedad font-size, 1em = 16px*/
 	font-weight: 800;
+	background-color: lightgreen;
+	color: #0809;
+	text-shadow: 3px 3px 3px #0806;
+
 }
 /*.ejem__index--active{ para darle propiedades solo a la etiqueta de esa clase que tiene el posfijo --active en html(se puede cambiar el posfijo a otras etiqueta manipulando con js).
 	color: #059;
@@ -175,13 +187,13 @@ h3{
 
 footer{
 	background-color: #055;
-	width: 100vw;
-	height: 10vh;
-	position: relative; top: 11vh;;
+	width: 98.8vw;
+	height: 8.5vh;
+	position: relative; top: 6vh;;
 }
 footer p1,p2{
-	color:orange;
 	line-height: 2;
+	color:gold;
 }
 #redes-sociales{
 	display: inline;
@@ -189,10 +201,11 @@ footer p1,p2{
 }
 .contacto{
 	display: inline-block;
-	font-family: Century Gothic;
-	color: white;	
 	width: 80px;
 	margin-left: 2vw;
+	font-family: Century Gothic;
+	color: white;
+	text-shadow: 2px 2px 7px #fff;	
 }
 .contacto:hover{
 	color: gold;
@@ -207,7 +220,9 @@ footer p2{
 }
 footer p2 i{
 	position: relative; left: 20px;
-	color: brown;
+	color :brown;
+	text-shadow: 1px 1px 3px pink;
+
 	font-family: Century Gothic;
 }
 
