@@ -88,23 +88,25 @@ header{
 	width: 100vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
 	height: 10vh;
 	background-color: #055;
+	opacity: 95%;				 /*trasnparencia*/
 }
 header a{
 	font-size: 3em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: relative; left: 1230px; top: 13px;
-	border-radius: 5px;
+	position: fixed; left: 1230px; top: 13px;
+	border-radius:6px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	color: #069;	
 	text-shadow: 2px 2px 5px #87ceeb;
 }
 
 header a:hover{
-	font-size: 3.1em; 
+	transform: scale(1.1);
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
 body{
 	background-color: #9dd5ab;
+	height: 115vh;
 }
 /*---------------------------------------------------------------------------------------------------------------*/
 
@@ -120,7 +122,7 @@ h1{
 
 h2{
 	margin: 0.4em 0;
-	padding-left: .3em;
+	padding-left: 1em;
 	color: #045;
 	font-size: 2.5em;
 }
@@ -137,14 +139,14 @@ h2{
 } 
 #Descripcion p a:hover{		   	/*:hover = pseudo-clase*/
 	font-size: 1.07em;
-	color: #0809;
+	color: #00660099;
 } 
 
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h3{
 	height: 10vh;
-	padding-left: 2.5em;
+	padding-left: 3em;
 	padding-top: 1.5em;
 	font-size: 25px; 
 	color: #055;
@@ -153,22 +155,23 @@ h3{
 	display: inline-block;
 	position: relative; left: 20vw;
 	margin-top: 2vh;
+	font-size: 16px;
 }
 .ejem__index a{
 	display: inline-block;
 	height: 35px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	font-size: 20px; 			/*para todos sus nodos hijos, el font size para la medida relativa 1em= 16px*/
+	font-size: 1.2em; 			/*para todos sus nodos hijos, el font size para la medida relativa 1em= 16px. la unidad em es escalable y siempre depende de su elemento padre. Como lista_ejem es la caja padre, entonces para la propiedad font-size, 1em = 16px*/
 	/*line-height: 2;			las letras por defecto ocupan 1 line-height, osea 0.5 hacia arriba y hacia abajo de 'ESPACIO' (su caja) desde 'el centro de cada letra'(osea el espacio por defecto que ocpupa la letra). En este caso le decimos que ocupe 0.6*/
 	border-radius: 3px;
 	color: #059;
 	box-shadow: 2px 2px 10px 1px #045;
 }
 .ejem__index a:hover{ 				
-	font-size: 1.5em; 			/*la unidad em es escalable y siempre depende de su elemento padre. Como lista_ejem es la caja padre, entonces para la propiedad font-size, 1em = 16px*/
+	transform: scale(1.12);
 	font-weight: 800;
-	background-color: lightgreen;
+	background-color: #a7f1a7;
 	color: #0809;
 	text-shadow: 3px 3px 3px #0806;
 
@@ -179,12 +182,7 @@ h3{
 
 /*---------------------------------------------------------------------------------------------------------------*/
 
-footer{
-	background-color: #055;
-	width: 100vw;
-	height: 8.5vh;
-	position: relative; top: 6vh;
-}
+
 
 footer p1,p2{
 	line-height: 2;
@@ -195,6 +193,7 @@ footer p1,p2{
 	display: inline-block;
 	width: 34.5vw;
 	position: relative;left: 65vw;
+	/*z-index: -1; ya que redes-sociales es hijo de footer y se sobrepone en lac caja footer, z-index al decirle -1 se anula footer pasaria a interponer en su hijo.*/
 }
 .contacto{
 	width: 80px;
@@ -213,8 +212,15 @@ footer p2{
 }
 footer p2 i{
 	position: relative; left: 20px;
-	color :brown;
+	color :#ba1515;
 	text-shadow: 1px 1px 3px pink;
 	font-family: Century Gothic;
 }
 
+footer{
+	width: 100vw;
+	height: 8.5vh;
+	position: fixed; bottom: 0.05vh;
+	background-color: #055;
+	opacity: 92%;
+}

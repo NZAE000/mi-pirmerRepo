@@ -2,24 +2,32 @@ header{
 	width: 100vw;
 	height: 10vh;
 	background-color: #055;
+	opacity: 95%;
 }
 header a{
 	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: relative; left: 1150px; top: 30px;
+	position: fixed; left: 1145px; top: 30px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	color: #069;	
 	text-shadow: 2px 2px 5px #87ceeb;
 }
 header a:hover{
-	font-size: 2.1em; 
+	transform: scale(1.1);
+	color:#004466;
 }
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+body{
+	height: 120vh;
+}
+
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 h1{
 	text-align: center;
 	background: #9dd5ab;
-	outline: #9dd5ab solid 0.68em;
+	outline: #9dd5ab solid 0.69em;
 	color:#045;
 }
 
@@ -27,19 +35,23 @@ h1{
 
 #lista-santa{
 	width: 100vw;
+	height: 50vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	flex-direction: row;
 	background: #e61a1a;
-	height: 22em;
 }
 .logo img[alt="Logo de Santa Isabel"]{
-	position: relative; left: 8vw; top: 5vh;
-	width: 20vw;
+	position: relative; left: 12vw; top: 5vh;
+	width: 17vw;
 	height: 30vh;
 	border-radius: 50%;
 	box-shadow: 4px 4px 20px 5px #660002, 4px 4px 20px 5px #660002, 4px 4px 20px 5px #660002;
+}
+.logo img[alt="Logo de Santa Isabel"]:hover{
+	transform: scale(1.15);
+	box-shadow: 4px 4px 20px 5px #f5a3a3, 4px 4px 20px 5px #f5a3a3, 4px 4px 20px 5px #f5a3a3;
 }
 .lista h2[id="h-santa"], a[href="https://www.santaisabel.cl/"]{
 	color:#660002;
@@ -65,7 +77,7 @@ h1{
 	position: relative; top: 4vh;
 }
 .lista ul{
-	position: relative; left: 5vw; top: 10vh;
+	position: relative; left: 5vw; top: 8vh;
 }
 .lista ul li{
 	line-height: 2vw;
@@ -80,6 +92,10 @@ h1{
 	border-radius: 6%;
 	box-shadow: 4px 4px 22px 1px #0f3d57, 4px 4px 22px 1px #0f3d57, 4px 4px 22px 1px #0f3d57;
 }
+.logo img[alt="Logo de Cyberday"]:hover{
+	transform: rotate(8deg);
+	box-shadow: 4px 4px 20px 5px #a8d5f0, 4px 4px 20px 5px #a8d5f0, 4px 4px 20px 5px #a8d5f0;
+}
 .lista h2[id="h-cyber"], a[href="https://www.cyber.cl/"]{
 	color:#0f3d57;
 }
@@ -91,21 +107,22 @@ h1{
 }
 #lista-cyber{
 	width: 100vw;
+	height: 50vh;;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	flex-direction: row;
 	background: #2697d9;
-	height: 22em;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 footer{
+	position: fixed; bottom: 0.05vh;
 	background-color: #055;
 	width: 100vw;
 	height: 8.5vh;
-	position: relative;
+	opacity: 80%;
 }
 
 footer p1,p2{
@@ -135,7 +152,7 @@ footer p2{
 }
 footer p2 i{
 	position: relative; left: 20px;
-	color :brown;
+	color :#ba1515;
 	text-shadow: 1px 1px 3px pink;
 	font-family: Century Gothic;
 }
