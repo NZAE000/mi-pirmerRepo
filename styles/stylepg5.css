@@ -1,0 +1,128 @@
+header{
+	width: 100vw;
+	height: 10vh;
+	background-color: #00330c99;
+	opacity: 90%;
+}
+header a{
+	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
+	position: fixed; left: 1145px; top: 30px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
+	color: #069;	
+	text-shadow: 2px 2px 5px #87ceeb;
+}
+header a:hover{
+	transform: scale(1.1);
+	transition: all 0.5s;
+	color:#004466;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+body{
+	background: #99ff9999;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+h1{
+	text-align: center;
+	color:#045;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+.noticia{
+	width: 95vw;
+	height: 105vh;
+	position:relative; left: 30px;
+	z-index: -1;
+	border: 1px solid #045;
+	background: #d3f8d3;
+}
+.noticia a{
+	position:relative;
+	z-index: 150;
+}
+.noticia img{
+	position: relative; top: 8em; right: 1.5em;
+	float: right;
+	border-radius: .5em;
+	/*estilo(solid, dashed, double, groove, ridge, inset, outset)*/
+	border: 4px double #007a99;
+}
+.informacion h2{
+	position: absolute; left: 13em; top: 1.5em;
+	color: #007a99;
+	text-shadow: 3px 3px 15px #66e0ff;
+}
+.informacion p{
+	position: relative; top: 7em;
+	line-height: 2em;
+	width: 44%;
+	padding-left: 2em;
+	color: #045;
+}
+.salto{
+	position: absolute; left: 2.5em;
+	color: #006199;
+}
+.salto:hover{
+	transform: scale(1.112);
+	transition: all 0.5s;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.noticia img[src="../img/tokio.png"] {
+	width: 49%;
+	height: 50%;
+}
+.noticia img[src="../img/ning.png"] {
+	width: 49%;
+	height: 50%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+footer{
+	position: fixed; bottom: 0.05vh;
+	background-color: #1d511599;
+	width: 100vw;
+	height: 8.5vh;
+	opacity: 80%;
+}
+
+footer p1,p2{
+	line-height: 2;
+	color:gold;
+}
+
+#redes-sociales{
+	display: inline-block;
+	width: 34.5vw;
+	position: relative;left: 65vw;
+}
+.contacto{
+	width: 80px;
+	margin-left: 2vw;
+	font-family: Century Gothic;
+	color: white;
+	text-shadow: 2px 2px 7px #fff;	
+}
+.contacto:hover{
+	color: gold;
+}
+footer p2{
+	display: block;
+	width: 38vw;
+	position: relative;left: 65vw;
+}
+footer p2 i{
+	position: relative; left: 20px;
+	color : #ba1515;
+	text-shadow: 1px 1px 3px pink;
+	font-family: Century Gothic;
+}

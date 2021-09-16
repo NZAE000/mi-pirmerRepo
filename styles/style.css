@@ -29,6 +29,7 @@
 										-diplay:
 											inline: el elemento se renderizará en línea con otros elementos.
 											block: hace que el comportamiento del elemento sea como un bloque. Los elementos hijos en block se adecuan al tamaño de la caja del padre.
+											inline-block: se redereiza en linea con otros elementos pero a su vez adquiere propiedades como establecer un ancho y alto en el elemento.
 										
 										-box-sizing:
 											border-box: Al cambiar de tamaño de alguna caja (ej: widht, height), no considera si el contenido tiene algun borde (border) o relleno (padding). 
@@ -58,6 +59,9 @@
 											fixed: los elementos se posicionan de forma relativa a la ventana del navegador. Su posición permanece fija aunque se desplace la ventana.
 											absolute: los elementos se posicionan de forma relativa al primer elemento padre que tenga una posición distinta a static.
 
+										-overflow: La propiedad CSS overflow especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
+										-transition: Las transiciones CSS le permiten cambiar los valores de propiedad sin problemas, durante un período determinado. Pase el mouse sobre el elemento de abajo para ver un efecto de transición de CSS.
+										-float: La propiedad float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).
 
 */
 
@@ -87,7 +91,7 @@
 header{
 	width: 100vw;				/*viewport: medidas relativas para el renderizado en dispositivos(se adapta a las medidas del hardware)*/
 	height: 10vh;
-	background-color: #055;
+	background-color: #00330c99;
 	opacity: 95%;				 /*trasnparencia*/
 }
 header a{
@@ -101,21 +105,30 @@ header a{
 
 header a:hover{
 	transform: scale(1.1);
+	transition: all 0.5s;
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
 body{
-	background-color: #9dd5ab;
-	height: 115vh;
+	background-color: #99ff9999;
+	height: 120vh;
 }
 /*---------------------------------------------------------------------------------------------------------------*/
 
-h1{
+#bienvenido{
+	width: 100vw;
+	height: 30vh;
+}
+#bienvenido h1{
 	display: inline-block; 		/*se comporta como un elemento en linea, pero adquiere las propiedades de un elemento en bloque*/	
 	width: 500px;				/*aumento del ancho de la caja(tambien con height)*/
 	padding-left: .5em;
 	color:#045;
 	font-size: 4.5em;
+}
+#bienvenido img[src="img/html.png"]{
+	position: absolute; top: 12em; right: 7em;
+	z-index: -1;
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
@@ -169,11 +182,12 @@ h3{
 	box-shadow: 2px 2px 10px 1px #045;
 }
 .ejem__index a:hover{ 				
-	transform: scale(1.12);
 	font-weight: 800;
 	background-color: #a7f1a7;
 	color: #0809;
-	text-shadow: 3px 3px 3px #0806;
+	text-shadow: 5px 5px 15px #00cc0066;
+	transform: scale(1.12);
+	transition: all 0.8s;
 
 }
 /*.ejem__index--active{ para darle propiedades solo a la etiqueta de esa clase que tiene el posfijo --active en html(se puede cambiar el posfijo a otras etiqueta manipulando con js).
@@ -221,6 +235,6 @@ footer{
 	width: 100vw;
 	height: 8.5vh;
 	position: fixed; bottom: 0.05vh;
-	background-color: #055;
-	opacity: 92%;
+	background-color: #1d511599;
+	opacity: 95%;
 }

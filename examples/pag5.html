@@ -2,71 +2,72 @@
 <html>
 <head>
 	<title>Mis noticias</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css"> <!--normalize(quitar la configuracion de propiedades del navegador y dejar una por defecto)-->
+	<link rel="stylesheet" type="text/css" href="../styles/stylepg5.css">
+	<!----------------------------------font-family--------------------------------------------------------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+	<!------------------------------------------------------------------------------------------------------>
 	<link rel="icon" href="../icon/EZ.ico">
 	<meta charset="utf-8">
 </head>
 <header>
-	<a href="../index.html" style="text-align: center; margin-left: 1200px"><b>Página principal</b></a>
-	<h1 style="color: blue">Haz entrado a la pagina 5</h1>
-	<h2 style="color: blue">Mis noticias:</h2>
+	<a href="../index.html"><b>Página principal</b></a>
 </header>
 <body>
-	<div id = "n1"; style="text-align: center;">
-		<br>
-		<a href="#n2" style="color: green">Ir a la noticia 2</a> <!--si se quiere direccionar a optra partes de la pagina se utiliza un # y valor de un atributo el cual utiliza una etiqueta en específico-->
-		<h3 style="color: red">Christian Dettoni Gana numero 1 del mundo Tokio 2020</h3>
+	<h1>Mis noticias</h1>
+	<a class = "salto" href="#n2">Ir a la noticia 2</a> <!--si se quiere direccionar a optra partes de la pagina se utiliza un # y valor de un atributo el cual utiliza una etiqueta en específico-->
+	<div class = "noticia" id = "n1">
 		<img src="../img/tokio.png">
-		<p>
-			La actuación del tenimesista nacional Cristián Dettoni en los Juegos Paralímpicos de Tokio 2020 no pudo haber comenzado de la mejor manera, tras vencer al número uno de la Clase 6. 
-			Dettoni (11 del mundo) se impuso en tres sets por parciales de 12-10, 11-8 y 11-7 al español Álvaro Valera, a quien nunca había derrotado en enfrentamientos anteriores.
-			<br><br>
-			Tras su victoria, Dettoni indicó que “Todavía me cuesta aterrizar. Todavía me cuesta imaginar lo que acabo de vinvenciar. Es mi primer triunfo en Juegos Paralímpicos. Había tenido en mundiales, pero hace mucho tiempo atrás”.
-			<br><br>
-			“Es primera vez que se le gana al número uno del mundo activo y la verdad estoy muy satisfecho, muy feliz con el trabajo que veníamos haciendo con la preparación psicológica y todos los que estuvieron conmigo, pero fundamentalmente mi familia que estuvo pendiente, se conectó. Hicieron todo lo posible para mandarme las vibras necesarias”, agregó el tenimesista nacional.
-		</p>
+		<div class="informacion">
+			<h2>Christian Dettoni Gana numero 1 del mundo Tokio 2020</h2>
+			<p>
+				La actuación del tenimesista nacional Cristián Dettoni en los Juegos Paralímpicos de Tokio 2020 no pudo haber comenzado de la mejor manera, tras vencer al número uno de la Clase 6. 
+				Dettoni (11 del mundo) se impuso en tres sets por parciales de 12-10, 11-8 y 11-7 al español Álvaro Valera, a quien nunca había derrotado en enfrentamientos anteriores.
+				Tras su victoria, Dettoni indicó que “Todavía me cuesta aterrizar. Todavía me cuesta imaginar lo que acabo de vinvenciar. Es mi primer triunfo en Juegos Paralímpicos. Había tenido en mundiales, pero hace mucho tiempo atrás”.
+				<b>“Es primera vez que se le gana al número uno del mundo activo y la verdad estoy muy satisfecho, muy feliz con el trabajo que veníamos haciendo con la preparación psicológica y todos los que estuvieron conmigo, pero fundamentalmente mi familia que estuvo pendiente, se conectó. Hicieron todo lo posible para mandarme las vibras necesarias”, agregó el tenimesista nacional.</b>
+			</p>
+		</div>
 	</div>
-	<div id = "n2"; style="text-align: center;">
-		<br>
-		<a href="#n3" style="color: green">Ir a la noticia 3</a>
-		<h3 style="color: red">La china Ding Ning se retira del Team TM</h3>
+	<a class = "salto" href="#n3">Ir a la noticia 3</a>
+	<div class = "noticia" id = "n2">
 		<img src="../img/ning.png">
-		<p>
-			Pekín, 6 sep (EFE).- La triple campeona olímpica china Ding Ning, de 31 años de edad, anunció este lunes su retirada del tenis de mesa.
-			<br><br>
-			En su comunicado divulgado a través de la red social Weibo -equivalente chino de Twitter-, Ding aseguró que "recordará cada momento" de su carrera de 26 años en el tenis de mesa, en la que también consiguió una medalla olímpica de plata.
-			Logró sus primeras medallas olímpicas en los Juegos de Londres 2012; la de plata en individual y la de oro por equipos.
-			Cuatro años después, en la cita olímpica de Río de Janeiro, consiguió superarse y se alzó con el oro en ambas disciplinas.
-			Además, se proclamó por primera vez ganadora del Campeonato Mundial de Tenis de Mesa en Róterdam en 2011, éxito que repetiría ocho veces más en años sucesivos.
-			En la Copa del Mundo de Tenis de Mesa se proclamó campeona diez veces, ya fuese en individual o por equipo.
-			<br><br>
-			Ding declaró en su comunicado en Weibo que, tras dejar el tenis de mesa, cursará estudios en la Universidad de Pekín, una de las más prestigiosas del país.
-		</p>
+		<div class="informacion">
+			<h2>La china Ding Ning se retira de TM Team</h2>
+			<p>
+				Pekín, 6 sep (EFE).- La triple campeona olímpica china Ding Ning, de 31 años de edad, anunció este lunes su retirada del tenis de mesa.
+				En su comunicado divulgado a través de la red social Weibo -equivalente chino de Twitter-, Ding aseguró que "recordará cada momento" de su carrera de 26 años en el tenis de mesa, en la que también consiguió una medalla olímpica de plata.
+				Logró sus primeras medallas olímpicas en los Juegos de Londres 2012; la de plata en individual y la de oro por equipos.
+				Cuatro años después, en la cita olímpica de Río de Janeiro, consiguió superarse y se alzó con el oro en ambas disciplinas.
+				Además, se proclamó por primera vez ganadora del Campeonato Mundial de Tenis de Mesa en Róterdam en 2011, éxito que repetiría ocho veces más en años sucesivos.
+				En la Copa del Mundo de Tenis de Mesa se proclamó campeona diez veces, ya fuese en individual o por equipo.
+				Ding declaró en su comunicado en Weibo que, tras dejar el tenis de mesa, cursará estudios en la Universidad de Pekín, una de las más prestigiosas del país.
+			</p>
+		</div>
 	</div>
-	<div id = "n3" style="text-align: center;">
-		<br>
-		<a href="#n1" style="color: green">Ir a la noticia 1</a>
-		<h3 style="color: red">Conor McGregor se rompe el tobillo y le entrega el triunfo a Dustin Poirier</h3>
+	<a class = "salto" href="#n1">Ir a la noticia 1</a>
+	<div class = "noticia" id = "n3">
 		<img src="../img/gregor.png">
-		<p>
-			La trilogía entre Dustin Poirier y Conor McGregor terminó en la forma menos pensada, con el irlandés fracturado de la pierna izquierda, en la pelea estelar de UFC 264, celebrada en la T-Mobile Arena, en Las Vegas.
-			<br><br>
-			Desde que arrancó la contienda el irlandés atacó con patadas al estadounidense, quien aguantó el castigo y después contraatacó, llevó a su rival a la lona y ahí lo dominó a placer, el ground and pound fue brutal, especialmente con los codazos.
-			<br><br>
-			Cuando estaba a punto de terminar el primer round y estaban poniéndose de pie, <b>McGregor pisó mal torció su tobillo y terminó por fracturarse.</b>
-			<br><br>
-			La frustración fue evidente al asegurar que esto no se ha acabado, pero para Poirier este parece ser ya un capítulo cerrado.
-		</p>
+		<div class="informacion">
+			<h2>Conor McGregor se rompe el tobillo y le entrega el triunfo a Dustin Poirier</h2>
+			<p>
+				La trilogía entre Dustin Poirier y Conor McGregor terminó en la forma menos pensada, con el irlandés fracturado de la pierna izquierda, en la pelea estelar de UFC 264, celebrada en la T-Mobile Arena, en Las Vegas.
+				Desde que arrancó la contienda el irlandés atacó con patadas al estadounidense, quien aguantó el castigo y después contraatacó, llevó a su rival a la lona y ahí lo dominó a placer, el ground and pound fue brutal, especialmente con los codazos.
+				Cuando estaba a punto de terminar el primer round y estaban poniéndose de pie, <b>McGregor pisó mal torció su tobillo y terminó por fracturarse.</b>
+				La frustración fue evidente al asegurar que esto no se ha acabado, pero para Poirier este parece ser ya un capítulo cerrado.
+			</p>
+		</div>
 	</div>
 </body>
 <footer>
-	<br>
-	<p style="color: darkred">Sigueme en:</p>
-	<nav>
-		<ul>
-			<li><a href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a></li>
-			<li><a href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a></li>
-		</ul>
-	</nav>
-	<p style="color: darkred">Contactame a mi email: <i style="color: black">elizerittf@gmail.com</i></p>
+	<div id = "redes-sociales">
+		<p1>Sigueme en:</p1>
+		<a class = "contacto" href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a>
+		<a class = "contacto" href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a>
+	</div>
+	<p2>Contactame a mi email:
+		<i>> elizerittf@gmail.com <</i>
+	</p2>
 </footer>
 </html>
