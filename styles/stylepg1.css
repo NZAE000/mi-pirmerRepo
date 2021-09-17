@@ -11,6 +11,7 @@ header a{
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	color: #069;	
 	text-shadow: 2px 2px 5px #87ceeb;
+	transition: all 0.5s;
 }
 header a:hover{
 	transform: scale(1.1);
@@ -62,6 +63,7 @@ h1{
 	height: 30vh;
 	border-radius: 50%;
 	box-shadow: 4px 4px 20px 5px #660002, 4px 4px 20px 5px #660002, 4px 4px 20px 5px #660002;
+	transition: all 0.8s;
 }
 .logo img[alt="Logo de Santa Isabel"]:hover{
 	box-shadow: 4px 4px 20px 5px #f5a3a3, 4px 4px 20px 5px #f5a3a3, 4px 4px 20px 5px #f5a3a3;
@@ -70,6 +72,7 @@ h1{
 }
 .lista h2[id="h-santa"], a[href="https://www.santaisabel.cl/"]{
 	color:#660002;
+	transition: all 0.3s;
 }
 .lista h2[id="h-santa"] a[href="https://www.santaisabel.cl/"]:hover{
 	font-size: 1.1em;
@@ -107,6 +110,7 @@ h1{
 	height: 25vh;
 	border-radius: 6%;
 	box-shadow: 4px 4px 22px 1px #0f3d57, 4px 4px 22px 1px #0f3d57, 4px 4px 22px 1px #0f3d57;
+	transition: all 0.8s;
 }
 .logo img[alt="Logo de Cyberday"]:hover{
 	box-shadow: 4px 4px 20px 5px #a8d5f0, 4px 4px 20px 5px #a8d5f0, 4px 4px 20px 5px #a8d5f0;
@@ -115,6 +119,7 @@ h1{
 }
 .lista h2[id="h-cyber"], a[href="https://www.cyber.cl/"]{
 	color:#0f3d57;
+	transition: all 0.3s;
 }
 .lista h2[id="h-cyber"] a[href="https://www.cyber.cl/"]:hover{
 	font-size: 1.1em;
@@ -169,7 +174,7 @@ footer p2{
 }
 footer p2 i{
 	position: relative; left: 20px;
-	color :#ba1515;
+	color :#891010;
 	text-shadow: 1px 1px 3px pink;
 	font-family: Century Gothic;
 }
