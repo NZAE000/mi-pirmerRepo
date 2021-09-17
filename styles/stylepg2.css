@@ -1,0 +1,152 @@
+body{
+	display: flex;
+	flex-direction: column;
+	background: #99ff9999;
+	width: 100vw;
+	min-height: 130vh;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+header{
+	width: 100vw;
+	height: 10vh;
+	background-color: #00330c99;
+	opacity: 90%;
+}
+header a{
+	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
+	position: fixed; left: 1145px; top: 30px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
+	color: #069;	
+	text-shadow: 2px 2px 5px #87ceeb;
+	transition: all 0.5s;
+}
+header a:hover{
+	transform: scale(1.1);
+	transition: all 0.5s;
+	color:#004466;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+#container{
+	display: flex;
+	width: 100vw;
+	flex-direction: row;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+.mi-video{
+	display: flex;
+	width: 75%;
+	flex-direction: column;
+}
+.mi-video h1{
+	text-align: center;
+	margin: 1em 0;
+	color:#045;
+}
+.mi-video video{
+	position: relative; left: 11em;
+	width: 70%;
+	height: 80%;
+	border: 1em double #00330c99;
+	border-radius: 1em;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+aside{								/*<p>Los mejores instrumentos es Ibanez.. </p>*/
+	display: flex;					/*<p>
+									Visita la pagina <a href="https://www.audiomusica.com/marcas/ibanez.html" target="_BLANK">audiomusica.com</a> y conoce instrumentos Ibanez
+									</p>*/
+	flex-direction: column;
+	width: 25%;	
+	align-self: center;
+	font-size: 16px;
+}
+aside span{
+	position: relative; left: 7.8em;
+	width: 110px;
+	height: 50px;
+	padding-left: 10px;
+	padding-top: 7px;
+	font-size: 2em;
+	color: #069;
+	text-shadow: 2px 2px 7px #66ccff;
+	border-top-left-radius: 25%;
+	border-bottom-left-radius: 25%;
+	box-shadow: -2px -2px 5px 2px  #00330c99;
+	transition: all 0.7s;
+
+}
+aside span:hover{
+	left: 2em;
+	width: 300px;
+	transition: all 0.7s;
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+article{
+	margin-top: 5em;
+}
+article section{
+	display: flex;
+	position: relative; left: 11.2em;
+	width: 50vw;
+	flex-direction: column;	
+}
+section h2{
+	margin-bottom: 2em;
+	color: #007a99;
+	text-shadow: 3px 3px 15px #66e0ff;
+}
+section p{
+	line-height: 2em;
+	color: #045;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+footer{
+	position: fixed; bottom: 0.05vh;
+	background-color: #1d511599;
+	width: 100vw;
+	height: 8.5vh;
+	opacity: 90%;
+}
+
+footer p1,p2{
+	line-height: 2;
+	color:gold;
+}
+
+#redes-sociales{
+	display: inline-block;
+	width: 34.5vw;
+	position: relative;left: 65vw;
+}
+.contacto{
+	width: 80px;
+	margin-left: 2vw;
+	font-family: Century Gothic;
+	color: white;
+	text-shadow: 2px 2px 7px #fff;	
+}
+.contacto:hover{
+	color: gold;
+}
+footer p2{
+	display: block;
+	width: 38vw;
+	position: relative;left: 65vw;
+}
+footer p2 i{
+	position: relative; left: 20px;
+	color :#891010;
+	text-shadow: 1px 1px 3px pink;
+	font-family: Century Gothic;
+}

@@ -72,7 +72,7 @@
 										-first-line: no aplicable para 'display: inline'. El Pseudoelemento ::first-line aplica estilos a la primera línea de un elemento de bloque. Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
 										-fisrt-letter: el pseudo-elemento ::first-letter aplica estilos a la primera letra de la primera línea un elemento de bloque, sólo cuando no es precedido de otro contenido (como imágenes o tablas).
 										-placeholder: El pseudo-elemento CSS  ::placeholder representa el texto provisional en un elemento <input> o un elemento <textarea>.
-										-selection: El ::selection selector coincide con la parte de un elemento que selecciona un usuario. Solo se pueden aplicar algunas propiedades CSS al ::selector de selección: color, fondo, cursor y contorno.
+										-selection: El ::selection selector coincide con la parte de un elemento que selecciona un usuario(destaca). Solo se pueden aplicar algunas propiedades CSS al ::selector de selección: color, fondo, cursor y contorno.
 										-before: En CSS, ::before crea un pseudoelemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad content. Este elemento se muestra en línea con el texto de forma predeterminada.
 										-after: En CSS, ::after crea un pseudo-elemento que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad content.Es en linea (inline) de forma predeterminada.
 												
@@ -80,13 +80,21 @@
 																 content: "→";
 															}
 
-								*Pseudo clases(eventos):
+								*Pseudo clases(eventos): elemento: pseudo-clase{};
 
-									hover: se adquiqeren propiedaes a tal elemento que es indicado con el ecsenario de pasara por encima con el mouse;
+									hover: se adquiqeren propiedaes a tal elemento que es indicado con el escenario de pasar por encima con el mouse;
 									link: se adquieren pripiedades a los elementos a para indexar. Esas porpiedades existen solo si no fue visitada la pagina.
 									visited: se comporta como la pseudo clase link pero cuando la pagina ya se visitó.
-									active: se adiquieren porpiedes a lemento donde son indicados por el evento de presionar elc click del mause.
+									active: se adiquieren propiedes a elemento donde son indicados por el evento de matener/presionar el click del mause.
 									focus: se adquieren propiedades enfocado al elemento input, es decir al precienar dentro del input para alguna entrada.
+
+								*Object-fit: La propiedad CSS object-fit indica cómo el contenido de un elemento reemplazado, por ejemplo un <img> o <video>, debería redimensionarse para ajustarse a su contenedor.
+									object-fit: 'modo'
+
+									contain: El contenido reemplazado está dimensionado para mantener su relación de aspecto mientras se ajusta dentro del cuadro de contenido del elemento.
+									cover: El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.
+									none: El contenido reemplazado no se redimensiona.
+									scale-down: Elije la resolucion o el modo que mas convenga de acuerdo al contenedor.El contenido se dimensiona como si none o contain estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño
 
 		
 */								
@@ -112,6 +120,11 @@
 	color: pink;
 }*/
 
+body{
+	background-color: #99ff9999;
+	height: 120vh;
+}
+
 /*---------------------------------------------------------------------------------------------------------------*/
 
 header{
@@ -135,11 +148,6 @@ header a:hover{
 	transition: all 0.4s;
 }
 
-/*---------------------------------------------------------------------------------------------------------------*/
-body{
-	background-color: #99ff9999;
-	height: 120vh;
-}
 /*---------------------------------------------------------------------------------------------------------------*/
 
 #bienvenido{
