@@ -90,7 +90,7 @@ footer{
 	background-color: #1d511599;
 	width: 100vw;
 	height: 8.5vh;
-	opacity: 80%;
+	opacity: 95%;
 }
 
 footer p1,p2{
@@ -112,6 +112,9 @@ footer p1,p2{
 }
 .contacto:hover{
 	color: gold;
+}
+.contacto img{
+	margin-left: .5em;
 }
 footer p2{
 	display: block;

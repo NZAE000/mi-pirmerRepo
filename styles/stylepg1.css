@@ -114,7 +114,7 @@ h1{
 	transition: all 0.8s;
 }
 .logo img[alt="Logo de Cyberday"]:hover{
-	box-shadow: 4px 4px 20px 5px #a8d5f0, 4px 4px 20px 5px #a8d5f0, 4px 4px 20px 5px #a8d5f0;
+	box-shadow: 4px 4px 20px 5px #d3eaf8, 4px 4px 20px 5px #d3eaf8, 4px 4px 20px 5px #d3eaf8;
 	transform: rotate(8deg);
 	transition: all 0.8s;
 }
@@ -167,6 +167,9 @@ footer p1,p2{
 }
 .contacto:hover{
 	color: gold;
+}
+.contacto img{
+	margin-left: .5em;
 }
 footer p2{
 	display: block;

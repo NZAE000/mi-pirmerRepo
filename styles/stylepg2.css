@@ -1,9 +1,9 @@
 body{
 	display: flex;
 	flex-direction: column;
-	background: #99ff9999;
+	background: #000;
 	width: 100vw;
-	min-height: 130vh;
+	min-height: 180vh;
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -11,12 +11,12 @@ body{
 header{
 	width: 100vw;
 	height: 10vh;
-	background-color: #00330c99;
-	opacity: 90%;
+	background-color: #6dd55d99;
+	opacity: 80%;
 }
 header a{
 	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: fixed; left: 1145px; top: 30px;
+	position: fixed; left: 1150px; top: 30px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	color: #069;	
@@ -34,21 +34,29 @@ header a:hover{
 #container{
 	display: flex;
 	width: 100vw;
+	margin-top: 1em;
 	flex-direction: row;
+	background-image: url("../img/RAMBOLASTBLOOD1.jpg");
+	border: .8em dashed #cc0000;
 }
+
 /*-----------------------------------------------------------------------------------------------------------------*/
-.mi-video{
+
+.pelicula{
 	display: flex;
-	width: 75%;
+	width: 100%;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.mi-video h1{
-	text-align: center;
-	margin: 1em 0;
-	color:#045;
+.pelicula h1{
+	font-family: 'Metal Mania', cursive;
+	font-size: 2.5em;
+	margin: .8em 0;
+	color:#990000;
+	text-shadow: 1px 1px 6px #ff3333;
 }
-.mi-video video{
-	position: relative; left: 11em;
+.pelicula video{
 	width: 70%;
 	height: 80%;
 	border: 1em double #00330c99;
@@ -57,57 +65,75 @@ header a:hover{
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
-aside{								/*<p>Los mejores instrumentos es Ibanez.. </p>*/
-	display: flex;					/*<p>
-									Visita la pagina <a href="https://www.audiomusica.com/marcas/ibanez.html" target="_BLANK">audiomusica.com</a> y conoce instrumentos Ibanez
-									</p>*/
-	flex-direction: column;
-	width: 25%;	
-	align-self: center;
-	font-size: 16px;
-}
-aside span{
-	position: relative; left: 7.8em;
-	width: 110px;
+/*<p>Los mejores instrumentos es Ibanez.. </p>*/
+/*<p>
+Visita la pagina <a href="https://www.audiomusica.com/marcas/ibanez.html" target="_BLANK">audiomusica.com</a> y conoce instrumentos Ibanez
+</p>*/
+
+aside{
+	position: fixed; left: 41.5em; top: 12em;
+	width: 112px;
 	height: 50px;
 	padding-left: 10px;
 	padding-top: 7px;
 	font-size: 2em;
-	color: #069;
+	color: #00a2cc;
 	text-shadow: 2px 2px 7px #66ccff;
 	border-top-left-radius: 25%;
 	border-bottom-left-radius: 25%;
 	box-shadow: -2px -2px 5px 2px  #00330c99;
-	transition: all 0.7s;
+	transition: left .7s, width .7s, color 2s;
 
 }
-aside span:hover{
-	left: 2em;
-	width: 300px;
-	transition: all 0.7s;
-
+aside:hover{
+	left: 35em;
+	width: 10em;
+	text-shadow: none;
+	color: transparent;
+	transition: left .7s, width .7s, color .8s;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
+
 article{
-	margin-top: 5em;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 2em;
+	background-image: url("../img/RAMBOLASTBLOOD.jpg");
+	justify-content: center;
+	align-items: center;
 }
 article section{
 	display: flex;
-	position: relative; left: 11.2em;
 	width: 50vw;
+	height: 95.5vh;
 	flex-direction: column;	
+	background: #0f290b99;
 }
-section h2{
-	margin-bottom: 2em;
-	color: #007a99;
-	text-shadow: 3px 3px 15px #66e0ff;
+section #sinopsis{
+	height: 12em;
+}
+section #sinopsis img{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #cc0000;
+	
+}
+section #sinopsis h2{
+	position: relative;
+	text-align: center;
+	margin-top: .5em;
+	color: #00a2cc;
+	text-shadow: 2px 2px 10px #00ccff;
 }
 section p{
+	margin-top: 5em;
 	line-height: 2em;
-	color: #045;
+	padding: 0em 1em;
+	color: #990000;
+	text-shadow: 1px 1px 8px #cc0000;
 }
-
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
@@ -116,9 +142,8 @@ footer{
 	background-color: #1d511599;
 	width: 100vw;
 	height: 8.5vh;
-	opacity: 90%;
+	opacity: 85%;
 }
-
 footer p1,p2{
 	line-height: 2;
 	color:gold;
@@ -138,6 +163,9 @@ footer p1,p2{
 }
 .contacto:hover{
 	color: gold;
+}
+.contacto img{
+	margin-left: .5em;
 }
 footer p2{
 	display: block;
