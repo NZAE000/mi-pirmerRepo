@@ -101,7 +101,12 @@
 
 								*Cursor: especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.									
 									cursor: modo;(pinte, row-resize, progress, copy). referecnia: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor.
-		
+								
+
+								*flex-box: Diseño de Caja Flexible, comúnmente conocido como Flexbox​, es un modelo de diseño CSS3. Forma de estrucutar o maquetar una pagina.
+										   Nos permite alinear, llenar o distribuir el espacio entre los elementos dentro de un contenedor, usando anchos y alturas flexibles. Esto, lo convierte en una gran herramienta para usar en sistemas de diseño responsivo.
+									
+									display: flex; <- si el contenedor padre adquiere esta propiedad, sus hijos o items seran flexibles(felx-items: solo sus hijos directos).
 */								
 
 /**{ 							'*' selector universal, osea selecciona todos los elementos del html.
