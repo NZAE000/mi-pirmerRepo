@@ -37,7 +37,7 @@ header a:hover{
 	margin-top: 1em;
 	flex-direction: row;
 	background-image: url("../img/RAMBOLASTBLOOD1.jpg");
-	border: .8em dashed #cc0000;
+	border: .6em dashed #cc0000;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -65,32 +65,73 @@ header a:hover{
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
-/*<p>Los mejores instrumentos es Ibanez.. </p>*/
+/*<p>Los mejores instrumentos es Ibanez..</p>*/
 /*<p>
 Visita la pagina <a href="https://www.audiomusica.com/marcas/ibanez.html" target="_BLANK">audiomusica.com</a> y conoce instrumentos Ibanez
 </p>*/
 
 aside{
-	position: fixed; left: 41.5em; top: 12em;
+	position: fixed; left: 1330px; top: 380px;
 	width: 112px;
 	height: 50px;
 	padding-left: 10px;
 	padding-top: 7px;
-	font-size: 2em;
-	color: #00a2cc;
-	text-shadow: 2px 2px 7px #66ccff;
 	border-top-left-radius: 25%;
 	border-bottom-left-radius: 25%;
 	box-shadow: -2px -2px 5px 2px  #00330c99;
-	transition: left .7s, width .7s, color 2s;
-
+	transition: left 1s, width 1s;
 }
 aside:hover{
-	left: 35em;
-	width: 10em;
-	text-shadow: none;
-	color: transparent;
-	transition: left .7s, width .7s, color .8s;
+	left: 1100px;
+	width: 500px;
+	transition: left 1.5s, width 1.5s;
+}
+aside p{
+	display: inline-block;
+	font-size: 2em;
+	color: #00a2cc;
+	text-shadow: 2px 2px 7px #66ccff;
+	transition: opacity 1s, font-size 1s;
+}
+aside:hover > p{
+	opacity: 0;
+	font-size: 0em;
+	transition: opacity 1s, font-size 1s;
+}
+aside p1{
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	font-size: 1em;
+	color: #00a2cc;
+	text-shadow: 2px 2px 7px #66ccff;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 3.5s;
+}
+aside:hover > p1{
+	overflow: visible;
+	opacity: 1;
+	left: 1100px;
+	width: 400px;
+	height: 600px;
+	transition: opacity 3.5s;
+}
+aside p1 a{
+	display: inline-block;
+	height: 0px;
+	font-size: 0.8em;
+	line-height: 1.3em;
+	color: gold;
+	text-shadow: 1px 1px 5px #ffe766;
+	opacity: 0;
+	transition: all 4s;
+}
+aside p1 a:hover{
+	height: 800px;
+	overflow: visible;
+	opacity: 1;
+	transition: all 4s;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/

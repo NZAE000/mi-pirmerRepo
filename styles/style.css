@@ -89,13 +89,18 @@
 									focus: se adquieren propiedades enfocado al elemento input, es decir al precienar dentro del input para alguna entrada.
 
 								*Object-fit: La propiedad CSS object-fit indica cómo el contenido de un elemento reemplazado, por ejemplo un <img> o <video>, debería redimensionarse para ajustarse a su contenedor.
-									object-fit: 'modo'
+									object-fit: 'modo';
 
 									contain: El contenido reemplazado está dimensionado para mantener su relación de aspecto mientras se ajusta dentro del cuadro de contenido del elemento.
 									cover: El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.
 									none: El contenido reemplazado no se redimensiona.
-									scale-down: Elije la resolucion o el modo que mas convenga de acuerdo al contenedor.El contenido se dimensiona como si none o contain estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño
+									scale-down: Elije la resolucion o el modo que mas convenga de acuerdo al contenedor.El contenido se dimensiona como si none o contain estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño.
 
+								*Object-position: determina el alineamiento del elemento dentro de la caja.
+									object-position: 'modo';(left, right, top, bottom, px, em , %, etc).
+
+								*Cursor: especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.									
+									cursor: modo;(pinte, row-resize, progress, copy). referecnia: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor.
 		
 */								
 
@@ -224,7 +229,7 @@ h3{
 	font-weight: 800;
 	background-color: #a7f1a7;
 	color: #0809;
-	text-shadow: 5px 5px 15px #00cc0066;
+	text-shadow: 1px 1px 10px #00cc0066;
 	transform: scale(1.12);
 	transition: all 0.7s;
 
