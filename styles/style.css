@@ -25,7 +25,9 @@
 										Las unidades relativas de CSS son aquellas que tienen en cuenta el contexto donde se encuentran. Son relativas a las dimensiones del contenedor donde se han definido.
 
 								*BOX-MODEL:
-										-line-height: modifica el contenido.
+										-line-height: modifica el espacio vertical del texto.
+										-text-aling: posiciona el texto de un contenedor(center, left, right).
+
 										-diplay:
 											inline: el elemento se renderizará en línea con otros elementos.
 											block: hace que el comportamiento del elemento sea como un bloque. Los elementos hijos en block se adecuan al tamaño de la caja del padre.
@@ -54,13 +56,13 @@
 												Para separar distancia entre una box a otra. Tales son top, right, bottom y left (parametricamente funciona ej: margin: 10px 10px 20px 20px)
 
 										-position:
-											static: los elementos se posicionan de acuerdo al flujo normal de la página. Es la posición natural de los elementos. No son afectados por las propiedades top, bottom, left y right.
-											relative: los elementos se posicionan de forma relativa a su posición normal.
-											fixed: los elementos se posicionan de forma relativa a la ventana del navegador. Su posición permanece fija aunque se desplace la ventana.
-											absolute: los elementos se posicionan de forma relativa al primer elemento padre que tenga una posición distinta a static.
+											static; los elementos se posicionan de acuerdo al flujo normal de la página. Es la posición natural de los elementos. No son afectados por las propiedades top, bottom, left y right.
+											relative; los elementos se posicionan de forma relativa a su posición normal.
+											fixed; los elementos se posicionan de forma relativa a la ventana del navegador. Su posición permanece fija aunque se desplace la ventana.
+											absolute; los elementos se posicionan de forma relativa al primer elemento padre que tenga una posición distinta a static.
 
 										-overflow: La propiedad CSS overflow especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
-										-transition: Las transiciones CSS le permiten cambiar los valores de propiedad sin problemas, durante un período determinado. Pase el mouse sobre el elemento de abajo para ver un efecto de transición de CSS.
+										-transition: Las transiciones CSS le permiten cambiar los valores de propiedad sin problemas, durante un período determinado. Pase el mouse sobre el elemento de abajo para ver un efecto de transición de CSS(con all cabian todas las propiedades dictadas en ese trancurso de tiempo).
 										-float: La propiedad float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).
 
 
@@ -97,17 +99,70 @@
 									scale-down: Elije la resolucion o el modo que mas convenga de acuerdo al contenedor.El contenido se dimensiona como si none o contain estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño.
 
 								*Object-position: determina el alineamiento del elemento dentro de la caja.
-									object-position: 'modo';(left, right, top, bottom, px, em , %, etc).
+									object-position: 'modo'; (left, right, top, bottom, px, em , %, etc).
 
 								*Cursor: especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.									
-									cursor: modo;(pinte, row-resize, progress, copy). referecnia: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor.
+									cursor: (pinte, row-resize, progress, copy)(modo); referecnia: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor.
 								
 
 								*flex-box: Diseño de Caja Flexible, comúnmente conocido como Flexbox​, es un modelo de diseño CSS3. Forma de estrucutar o maquetar una pagina.
-										   Nos permite alinear, llenar o distribuir el espacio entre los elementos dentro de un contenedor, usando anchos y alturas flexibles. Esto, lo convierte en una gran herramienta para usar en sistemas de diseño responsivo.
+										   Nos permite alinear, llenar o distribuir el espacio entre los elementos dentro de un 'contenedor', usando anchos y alturas flexibles. Esto, lo convierte en una gran herramienta para usar en sistemas de diseño responsivo.
 									
-									display: flex; <- si el contenedor padre adquiere esta propiedad, sus hijos o items seran flexibles(felx-items: solo sus hijos directos).
-*/								
+									display: flex; <- si el contenedor padre adquiere esta propiedad, sus hijos o items seran flexibles (flex-items: solo sus hijos directos).
+
+									flex-direction: cambia la direccion del main axis(eje x) a cross axis(eje y) o viceversa.
+										-row: ordena todos sus items en fila (main axis, por defecto).
+										-colum: ordena todos sus items en columna (cross axis).					
+										-row-reverse: cambia el sentido del main axis(de derecha a izquierda) y ordena los items de esa forma.
+										-colum-reverse: cambia el sentido del crossa axis(de abajo hacia arriba) y ordena los items de esa forma.
+
+									flex-wrap: especifica si los elementos flexibles deben ajustarse o no.
+										-wrap: especifica que los elementos flexibles se envolverán si es necesario(apilar al sentido del cross axis)
+										-nowrap: valor por defecto. Especifica que los elementos flexibles no se envolverán.
+										-wrap-reverse: Especifica que los elementos flexibles se envolverán, si es necesario, en orden inverso(apilar al contra-sentido del cross axis).
+
+									flex-flow: abrevia las dos propiedes anteriores.
+										flex-flow: colum wrap / row wrap / etc;
+
+									justify-content: alinea los elementos del contenedor flexible cuando los elementos no utilizan todo el espacio disponible en el eje principal (horizontalmente).
+										-center: los elementos o hijos directos del contenedor flex se colocan en el centro del contenedor.
+										-space-around: Los elementos o hijos directos del contenedor flex tendrán espacio antes, entre y después de ellos.
+										-space-between: Los elementos o hijos directos del contenedor flex  tendrán espacio entre ellos.
+										-space-evenly: Los elementos tendrán el mismo espacio a su alrededor.
+
+									align-items: especifica la alineación predeterminada para los elementos dentro del contenedor flexible (vertical)(utilizable para 'una linea' de items, ya que si se utiliza 'flex-wrapp: wrap', si se encoje la pagina la seguna linea pasa al centro. Para que no ocurra esto se utiliza align-content).
+										-strech: por defecto. los elementos hijos directos del contenedor flexible se estiran a lo largo del cross axis para adaptarse al contenedor.
+										-center: los elementos hijos directos del contenedor flexible se colocan en el centro del contenedor.
+										-flex-end: los elementos hijos directos del contenedor flexible se colocan al final del contenedor.
+										-flex-start: los elementos hijos directos del contenedor flexible se colocan al principio del contenedor.
+										-baseline: los elementos hijos directos del contenedor flexible se colocan en la línea de base del contenedor.
+
+									align-content: modifica el comportamiento de la propiedad flex-wrap. Es similar a align-items , pero en lugar de alinear elementos flexibles, alinea 'líneas' flexibles.
+
+								*flex-items: propiedades solo para elementos o items flexibles, es decir, elementos dentro de un contenedor con display: flex.
+
+									align-self: especifica la alineación del elemento seleccionado dentro del contenedor flexible.
+										-auto: Defecto. El elemento hereda la propiedad align-items de su contenedor principal, o "estirar" si no tiene un contenedor principal.
+										Los demas valores que provee esta propiedad son las mismas que tiene align-items
+
+									margin: cuando los elementos o hijo directos son flex(estan dentro de un contenedor flex), el margin actua de manera contraria al margen normal. Es decir, si se le da un margin-lef, el margen izquierdo se engruesa de izquierda a derecha.
+											Con margin: auto, centras el elemento al centro del contenedor flex.
+
+									flex-grow: especifica cuánto crecerá el elemento-flex en relación con el resto de los elementos flexibles dentro del mismo contenedor (todos (o solo un elemento del contenedor) crece/n en proporcion al espacio que sobra del contenedor).
+										flex-grow: 1,2,3..; (Un número que especifica cuánto crecerá el artículo en relación con el resto de los artículos flexibles. El valor predeterminado es 0).
+									
+									flex-shrink: especifica cómo se encogerá un elemento flex en relación con el resto de los artículos flexibles dentro del mismo contenedor..
+										flex-shrink: 0, 1,2,3..; (Un número que especifica cuánto se encogerá el artículo en relación con el resto de los artículos flexibles. El valor predeterminado es 1. Con 0 no encoge).
+
+									flex-basis: especifica la longitud inicial(como width, pero con mas jerarquia) de un elemento flexible(item dentro de u contenedor flex).
+
+									flex: abrevia las tres propiedes anteriores.
+										flex: 1(grow) 0(shrink) 350px(basis);
+
+									order: especifica el orden de un elemento flexible en relación con el resto de los elementos flexibles dentro del mismo contenedor (Es como el z-index, pero en vez del eje z es en direccion al main axis).
+										order: 1,2,3...; (Valor predeterminado 0. Especifica el orden del artículo flexible).
+
+*/										
 
 /**{ 							'*' selector universal, osea selecciona todos los elementos del html.
 	color: red;
@@ -131,8 +186,14 @@
 }*/
 
 body{
+	display: flex; 
+	flex-direction: column; 		/*sus hijos directos(header y footer) se ordenearan en columnas.*/
 	background-color: #99ff9999;
-	height: 120vh;
+	min-height: 120vh;
+}
+body img[src="img/html.png"]{
+	position: absolute; top: 12.5em; right: 6.5em;
+	z-index: -1;
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
@@ -145,7 +206,7 @@ header{
 }
 header a{
 	font-size: 3em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: fixed; left: 1230px; top: 13px;
+	position: fixed; left: 85%; top: 13px;
 	border-radius:6px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	transition: all 0.4s;
@@ -171,10 +232,6 @@ header a:hover{
 	padding-left: .5em;
 	color:#045;
 	font-size: 4.5em;
-}
-#bienvenido img[src="img/html.png"]{
-	position: absolute; top: 12.5em; right: 6.5em;
-	z-index: -1;
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
