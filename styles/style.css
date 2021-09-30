@@ -137,7 +137,7 @@
 										-flex-start: los elementos hijos directos del contenedor flexible se colocan al principio del contenedor.
 										-baseline: los elementos hijos directos del contenedor flexible se colocan en la línea de base del contenedor.
 
-									align-content: modifica el comportamiento de la propiedad flex-wrap. Es similar a align-items , pero en lugar de alinear elementos flexibles, alinea 'líneas' flexibles.
+									align-content: modifica el comportamiento de la propiedad flex-wrap. Es similar a align-items, pero en lugar de alinear elementos flexibles, alinea 'líneas' flexibles.
 
 								*flex-items: propiedades solo para elementos o items flexibles, es decir, elementos dentro de un contenedor con display: flex.
 
@@ -250,6 +250,7 @@ h2{
 }
 #Descripcion p a{		   		/*selector por descendiente(de tal elemento con id(y tambien posible por clase) selecciono un hijo(en su ambito {}) y asi ..)*/
 	color: #069;
+	text-decoration: none;
 	transition: all 0.2s;
 }
 #Descripcion p a:hover{		   	/*:hover = pseudo-clase*/
@@ -334,6 +335,7 @@ footer p1{
 	font-family: Century Gothic;
 	color: white;
 	text-shadow: 2px 2px 7px #fff;	
+	text-decoration: none;
 }
 .contacto:hover{
 	color: gold;

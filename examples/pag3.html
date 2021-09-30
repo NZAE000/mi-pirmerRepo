@@ -2,34 +2,56 @@
 <html>
 <head>
 	<title>Mi formulario</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css"> <!--normalize(quitar la configuracion de propiedades del navegador y dejar una por defecto)-->
+	<link rel="stylesheet" type="text/css" href="../styles/stylepg3.css">
+	<!----------------------------------font-family--------------------------------------------------------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+	<!------------------------------------------------------------------------------------------------------>
 	<link rel="icon" href="../icon/EZ.ico">
 	<meta charset="utf-8">
 </head>
-<header>
-	<a href="../index.html" style="text-align: center; margin-left: 1300px"><b>Página principal</b></a>
-	<h1 style="color: blue">Haz entrado a la pagina 3</h1>
-	<h2 style="color: blue">Mi formulario:</h2>
-</header>
 <body>
-	<form method="post"> <!--El atributo method define con qué método HTTP se envían los datos (generalmente get o post. La diferencia entre los métodos get y post radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método GET envía los datos usando la URL, el método POST los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).-->
-		<p>Nombre:</p><input type="text" name="nombre" placeholder = "su nombre"; required=""> <!--placeholder para mecionar que informacion debe ir en el input-->
-		<p>Edad:</p><input type="number" name="edad" required="">
-		<p>Email:</p><input type="email" name="mail" required="">
-		<p>Contraseña:</p><input type="password" name="pass" required="">
-		<!--<input type="button" name="boton">-->
-		<br><br><p>Asunto:</p><textarea></textarea>
-		<br><br><input type="submit">
-	</form>
+	<header>
+		<a href="../index.html"><b>Página principal</b></a>
+	</header>
+	<h1>Mi formulario</h1>
+	<div class="container">
+		<form method="post"> <!--El atributo method define con qué método HTTP se envían los datos (generalmente get o post. La diferencia entre los métodos get y post radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método GET envía los datos usando la URL, el método POST los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).-->
+			<div class="form__section">
+				<input type="text" name="nombre" placeholder = "asunto"; required=""> <!--placeholder para mecionar que informacion debe ir en el input-->
+			</div>
+			<div class="form__section">
+				<input type="email" name="mail" placeholder = "mail"; required="">
+			</div>
+			<div class="form__section">
+				<textarea></textarea>
+			</div>
+			<input type="submit">
+			<!--<p>Edad:</p><input type="number" name="edad" required="">-->
+			<!--<p>Contraseña:</p><input type="password" name="pass" required="">-->
+			<!--<input type="button" name="boton">-->
+		</form>
+		<div class="form-img">
+			<divc class = "container-img">
+				<img src="../img/mail.png">
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div id = "redes-sociales">
+			<p1>Sigueme en:</p1>
+			<a class = "contacto" href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook<img src="../img/facebook.png"></a>
+			<a class = "contacto" href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram<img src="../img/instagram.png"></a>
+		</div>
+		<p2>Contactame a mi email:
+			<i>> elizerittf@gmail.com <</i>
+		</p2>
+	</footer>
 </body>
-<footer>
-	<br>
-	<p style="color: darkred">Sigueme en:</p>
-	<nav>
-		<ul>
-			<li><a href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a></li>
-			<li><a href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a></li>
-		</ul>
-	</nav>
-	<p style="color: darkred">Contactame a mi email: <i style="color: black">elizerittf@gmail.com</i></p>
-</footer>
 </html>

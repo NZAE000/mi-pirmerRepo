@@ -1,0 +1,149 @@
+body{
+	display: flex;
+	flex-direction: column;
+	background-color: #99ff9999;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+header{
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 10vh;
+	background-color: #00330c99;
+	opacity: 95%;
+}
+header a{
+	position: fixed;
+	align-self: flex-end;
+	margin-right: 1.5%;
+	margin-top: 1.5%;
+	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
+	color: #0088cc;	
+	text-shadow: 2px 2px 5px #87ceeb;
+	transition: all 0.5s;
+}
+header a:hover{
+	color:#00aaff;
+	text-shadow: 2px 2px 5px #a8dbf0;
+	transform: scale(1.1);
+	transition: all 0.5s;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+h1{
+	text-align: center;
+	color:#045;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.container{
+	display: flex;
+	align-items: center; /*centrado verticalmente*/
+	justify-content: center;
+	flex-wrap: wrap;
+	background: #2c7a2099;
+	margin: 50px 100px;
+}
+form{
+	min-width: 400px;
+	flex: 1; /*primer parametro 'grow': el ancho de este contenedor ocupa el espacio que sobra */
+	text-align: center;
+	padding: 30px;
+}
+.form__section input{
+	width: 100%;
+	padding: 7px;
+	margin: 7px 0;
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #00aaff;
+	background: #ccff9999;
+}
+.form__section input:focus{
+	background: #99ddff;
+}
+.form__section textarea{
+	width: 100%;
+	min-height: 180px;
+	margin: 7px 0;
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #00aaff;
+	background: #ccff9999;
+}
+.form__section textarea:focus{
+	background: #99ddff;
+}
+.form-img {
+	display: flex;
+	flex: 1;
+	padding: 15px;
+}
+.container-img{
+	display: flex;
+	width: 65%;
+	height: 350px;
+	padding: 40px;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.container-img img{
+	width: 80%;
+	margin: auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed; bottom: 0.05vh;
+	width: 100vw;
+	height: 8.5vh;
+	background-color: #1d511599;
+	opacity: 95%;
+}
+footer p1{
+	color:gold;
+}
+#redes-sociales{
+	align-self: flex-end;
+	padding-right: 1%;
+	/*z-index: -1; ya que redes-sociales es hijo de footer y se sobrepone en lac caja footer, z-index al decirle -1 se anula footer pasaria a interponer en su hijo.*/
+}
+.contacto{
+	width: 80px;
+	margin-left: 2vw;
+	font-family: Century Gothic;
+	color: white;
+	text-shadow: 2px 2px 7px #fff;	
+	text-decoration: none;
+}
+.contacto:hover{
+	color: gold;
+}
+.contacto img{
+	margin-left: .5em;
+}
+footer p2{
+	align-self: flex-end;
+	margin-top: .5%;
+	padding-right: 2.5%;
+	color:gold;
+}
+footer p2 i{
+	position: relative; left: 20px;
+	color :#891010;
+	text-shadow: 1px 1px 3px pink;
+	font-family: Century Gothic;
+}

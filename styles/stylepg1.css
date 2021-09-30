@@ -9,14 +9,19 @@ body{
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 header{
+	display: flex;
+	flex-direction: column;
 	width: 100vw;
 	height: 10vh;
 	background-color: #00330c99;
 	opacity: 95%;
 }
 header a{
+	position: fixed;
+	align-self: flex-end;
+	margin-right: 1.5%;
+	margin-top: 1.5%;
 	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: fixed; left: 1145px; top: 30px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
 	color: #069;	
@@ -24,9 +29,10 @@ header a{
 	transition: all 0.5s;
 }
 header a:hover{
+	color:#0088cc;
+	text-shadow: 2px 2px 5px #a8dbf0;
 	transform: scale(1.1);
 	transition: all 0.5s;
-	color:#004466;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -52,14 +58,14 @@ h1{
 
 #lista-santa{
 	display: flex;
+	flex-direction: row;
 	height: 55vh;
 	align-items: center;
 	justify-content: space-around;
-	flex-direction: row;
 	background: #e61a1a;
 }
 .logo img[alt="Logo de Santa Isabel"]{
-	position: relative; left: 12vw; top: 5vh;
+	align-self: center;
 	width: 17vw;
 	height: 30vh;
 	border-radius: 50%;
@@ -74,6 +80,7 @@ h1{
 .lista h2[id="h-santa"], a[href="https://www.santaisabel.cl/"]{
 	color:#660002;
 	transition: all 0.3s;
+	text-decoration: none;
 }
 .lista h2[id="h-santa"] a[href="https://www.santaisabel.cl/"]:hover{
 	font-size: 1.1em;
@@ -86,27 +93,34 @@ h1{
 /*Clases que utiliza lista-santa y lista-cyber----------------------------------------------------------------------*/
 
 .logo{
+	display: flex;
+	justify-content: center;
 	width: 40vw;
 	height: 40vh;
 }
 .lista{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	width: 40vw;
 	height: 40vh;
 }
 .lista h2{
-	position: relative; top: 4vh;
+	text-align: center;
 }
 .lista ul{
-	position: relative; left: 5vw; top: 8vh;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
 }
 .lista ul li{
-	line-height: 2vw;
+	margin: 3% 0;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 .logo img[alt="Logo de Cyberday"]{
-	position: relative; left: 1vw; top: 3vh;
+	align-self: center;
 	width: 43vw;
 	height: 25vh;
 	border-radius: 6%;
@@ -120,6 +134,7 @@ h1{
 }
 .lista h2[id="h-cyber"], a[href="https://www.cyber.cl/"]{
 	color:#0f3d57;
+	text-decoration: none;
 	transition: all 0.3s;
 }
 .lista h2[id="h-cyber"] a[href="https://www.cyber.cl/"]:hover{
@@ -141,22 +156,22 @@ h1{
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: fixed; bottom: 0.05vh;
-	background-color: #1d511599;
 	width: 100vw;
 	height: 8.5vh;
-	opacity: 90%;
+	background-color: #1d511599;
+	opacity: 95%;
 }
-
-footer p1,p2{
-	line-height: 2;
+footer p1{
 	color:gold;
 }
-
 #redes-sociales{
-	display: inline-block;
-	width: 34.5vw;
-	position: relative;left: 65vw;
+	align-self: flex-end;
+	padding-right: 1%;
+	/*z-index: -1; ya que redes-sociales es hijo de footer y se sobrepone en lac caja footer, z-index al decirle -1 se anula footer pasaria a interponer en su hijo.*/
 }
 .contacto{
 	width: 80px;
@@ -164,6 +179,7 @@ footer p1,p2{
 	font-family: Century Gothic;
 	color: white;
 	text-shadow: 2px 2px 7px #fff;	
+	text-decoration: none;
 }
 .contacto:hover{
 	color: gold;
@@ -172,9 +188,10 @@ footer p1,p2{
 	margin-left: .5em;
 }
 footer p2{
-	display: block;
-	width: 38vw;
-	position: relative;left: 65vw;
+	align-self: flex-end;
+	margin-top: .5%;
+	padding-right: 2.5%;
+	color:gold;
 }
 footer p2 i{
 	position: relative; left: 20px;
