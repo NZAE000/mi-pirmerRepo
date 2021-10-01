@@ -48,15 +48,19 @@ h1{
 	display: flex;
 	align-items: center; /*centrado verticalmente*/
 	justify-content: center;
+	margin: 50px 100px;
+	padding: 0 30px;
 	flex-wrap: wrap;
 	background: #2c7a2099;
-	margin: 50px 100px;
+	border: 10px solid #1e501699;
+	outline: 3px solid #33bbff;
 }
 form{
-	min-width: 400px;
+	min-width: 300px;
 	flex: 1; /*primer parametro 'grow': el ancho de este contenedor ocupa el espacio que sobra */
 	text-align: center;
 	padding: 30px;
+	order: 2;
 }
 .form__section input{
 	width: 100%;
@@ -65,40 +69,66 @@ form{
 	outline: none;
 	border: none;
 	border-bottom: 3px solid #00aaff;
-	background: #ccff9999;
+	background: linear-gradient(to bottom, transparent, #3aa22a99);
+	color: #fff;
 }
 .form__section input:focus{
-	background: #99ddff;
+	background: linear-gradient(to bottom, transparent, #66ccff);
+	border-bottom: 3px solid #33bbff;
 }
 .form__section textarea{
 	width: 100%;
 	min-height: 180px;
+	padding: 7px;
 	margin: 7px 0;
 	outline: none;
 	border: none;
 	border-bottom: 3px solid #00aaff;
-	background: #ccff9999;
+	background: linear-gradient(to bottom, transparent, #3aa22a99);
+	color: #fff;
+	resize: none;
 }
 .form__section textarea:focus{
-	background: #99ddff;
+	background: linear-gradient(to bottom, transparent, #99ddff);
+	border-bottom: 3px solid #33bbff;
 }
 .form-img {
 	display: flex;
+	min-width: 50%;
+	max-width: 70%;
 	flex: 1;
 	padding: 15px;
 }
 .container-img{
 	display: flex;
-	width: 65%;
-	height: 350px;
-	padding: 40px;
+	width: 70%;
+	padding: 8%;
 	margin: auto;
 	background-color: #fff;
 	border-radius: 50%;
+	border: 2px solid #33bbff;
 }
 .container-img img{
-	width: 80%;
+	width: 90%;
 	margin: auto;
+}
+
+.form__send input{
+	width: 100%;
+	padding: 12px;
+	margin: 7px 0;
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #00aaff;
+	background:  #0d660099;
+	color: #fff;
+	transition: all .1s;
+}
+.form__send input:hover{
+	background: #14990099;
+}
+.form__send input:active{
+	background: linear-gradient(to bottom, transparent, #1acc0099);
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/

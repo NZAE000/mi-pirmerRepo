@@ -20,19 +20,21 @@
 	<header>
 		<a href="../index.html"><b>Página principal</b></a>
 	</header>
-	<h1>Mi formulario</h1>
+	<h1>Email</h1>
 	<div class="container">
 		<form method="post"> <!--El atributo method define con qué método HTTP se envían los datos (generalmente get o post. La diferencia entre los métodos get y post radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método GET envía los datos usando la URL, el método POST los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).-->
 			<div class="form__section">
-				<input type="text" name="nombre" placeholder = "asunto"; required=""> <!--placeholder para mecionar que informacion debe ir en el input-->
+				<input type="text" name="mail" placeholder = "mail"; required=""> <!--placeholder para mecionar que informacion debe ir en el input-->
 			</div>
 			<div class="form__section">
-				<input type="email" name="mail" placeholder = "mail"; required="">
+				<input type="email" name="asunto" placeholder = "asunto"; required="">
 			</div>
 			<div class="form__section">
-				<textarea></textarea>
+				<textarea name="mensaje" placeholder = "mensaje"></textarea>
 			</div>
-			<input type="submit">
+			<div class="form__send">
+				<input type="submit">
+			</div>
 			<!--<p>Edad:</p><input type="number" name="edad" required="">-->
 			<!--<p>Contraseña:</p><input type="password" name="pass" required="">-->
 			<!--<input type="button" name="boton">-->

@@ -88,7 +88,7 @@
 									link: se adquieren pripiedades a los elementos a para indexar. Esas porpiedades existen solo si no fue visitada la pagina.
 									visited: se comporta como la pseudo clase link pero cuando la pagina ya se visitó.
 									active: se adiquieren propiedes a elemento donde son indicados por el evento de matener/presionar el click del mause.
-									focus: se adquieren propiedades enfocado al elemento input, es decir al precienar dentro del input para alguna entrada.
+									focus: se adquieren propiedades enfocado al elemento input, es decir al precionar dentro del input para alguna entrada.
 
 								*Object-fit: La propiedad CSS object-fit indica cómo el contenido de un elemento reemplazado, por ejemplo un <img> o <video>, debería redimensionarse para ajustarse a su contenedor.
 									object-fit: 'modo';
