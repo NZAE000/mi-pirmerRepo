@@ -1,0 +1,114 @@
+body{
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
+	background: radial-gradient(circle, #99ff9999, #2c7a2099);
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+header{
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 10vh;
+	background-color: #00330c99;
+	opacity: 90%;
+}
+header a{
+	position: fixed;
+	align-self: flex-end;
+	margin-right: 1.5%;
+	margin-top: 1.5%;
+	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
+	color: #0088cc;	
+	text-shadow: 2px 2px 5px #87ceeb;
+	transition: all 0.5s;
+}
+header a:hover{
+	color:#00aaff;
+	text-shadow: 2px 2px 5px #a8dbf0;
+	transform: scale(1.1);
+	transition: all 0.5s;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+h1{
+	margin: 1.2em 0;
+	text-align: center;
+	color:#045;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+.table{
+	display: grid;
+	grid-template-rows: 30px repeat(4, 50px); /*la primera fila tendra 30px de espacio. Las demas son de 50px*/
+	grid-gap: 1px;
+	margin: 0 25%;
+}
+.section, .data{
+	display: grid;
+	grid-template-columns: repeat(4, 180px);
+	grid-gap: 1px;
+}
+.section p{
+	text-align: center;
+	border: 2px solid #0088cc;
+}
+.data p{
+	text-align: center;
+	border: 2px solid #045;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed; bottom: 0.05vh;
+	width: 100vw;
+	height: 8.5vh;
+	background-color: #1d511599;
+	opacity: 95%;
+}
+footer p1{
+	color:gold;
+}
+#redes-sociales{
+	align-self: flex-end;
+	padding-right: 1%;
+	/*z-index: -1; ya que redes-sociales es hijo de footer y se sobrepone en lac caja footer, z-index al decirle -1 se anula footer pasaria a interponer en su hijo.*/
+}
+.contacto{
+	width: 80px;
+	margin-left: 2vw;
+	font-family: Century Gothic;
+	color: white;
+	text-shadow: 2px 2px 7px #fff;	
+	text-decoration: none;
+}
+.contacto:hover{
+	color: gold;
+}
+.contacto img{
+	margin-left: .5em;
+}
+footer p2{
+	align-self: flex-end;
+	margin-top: .5%;
+	padding-right: 2.5%;
+	color:gold;
+}
+footer p2 i{
+	position: relative; left: 20px;
+	color :#891010;
+	text-shadow: 1px 1px 3px pink;
+	font-family: Century Gothic;
+}

@@ -2,42 +2,66 @@
 <html>
 <head>
 	<title>Mi tabla</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css"> <!--normalize(quitar la configuracion de propiedades del navegador y dejar una por defecto)-->
+	<link rel="stylesheet" type="text/css" href="../styles/stylepg4.css">
+	<!----------------------------------font-family--------------------------------------------------------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+	<!------------------------------------------------------------------------------------------------------>
 	<link rel="icon" href="../icon/EZ.ico">
 	<meta charset="utf-8">
 </head>
-<header>
-	<a href="../index.html" style="text-align: center; margin-left: 1300px"><b>Página principal</b></a>
-	<h1 style="color: blue">Haz entrado a la pagina 4</h1>
-	<h2 style="text-align: center; margin-right: 50px; color: blue">Mi Tabla:</h2>
-</header>
 <body>
-	<br>
-	<center>
-		<table border="2px"> <!--con la etiqueta tr es para una fila, y por cada una se usa la etiqueta td para las columnas. -->
-			<tr>
-				<td><b>Nombre</b></td>
-				<td><b>Apellido</b></td>
-				<td><b>Semestre</b></td>
-				<td><b>Ramo favorito</b></td>
-			</tr>
-			<tr>
-				<td>Eliezer</td>
-				<td>Zúñiga</td>
-				<td>Sexto</td>
-				<td>Programación 1</td>
-			</tr>
-		</table>
-	</center>	
+	<header>
+		<a href="../index.html"><b>Página principal</b></a>
+	</header>
+	<h1>Mi Tabla</h1>
+	<div class = "table">
+		<div class = "section">
+			<p>Nombre</p>
+			<p>Apellido</p>
+			<p>Semestre</p>
+			<p>Ramo favorito</p>
+		</div>
+		<div class = "data">
+			<p>Eliezer</p>
+			<p>Zúñiga</p>
+			<p>Sexto</p>
+			<p>Programación</p>	
+		</div>
+		<div class = "data">
+			<p>Marcos</p>
+			<p>Vivar</p>
+			<p>Sexto</p>
+			<p>Programación Web</p>
+		</div>
+		<div class = "data">
+			<p>Maximiliano</p>
+			<p>Espíndola</p>
+			<p>Sexto</p>
+			<p>Electromagnetismo</p>
+		</div>
+		<div class = "data">
+			<p>Maximiliano</p>
+			<p>Zvonko</p>
+			<p>Sexto</p>
+			<p>Redes</p>
+		</div>
+	</div>
+	<footer>
+		<div id = "redes-sociales">
+			<p1>Sigueme en:</p1>
+			<a class = "contacto" href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook<img src="../img/facebook.png"></a>
+			<a class = "contacto" href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram<img src="../img/instagram.png"></a>
+		</div>
+		<p2>Contactame a mi email:
+			<i>> elizerittf@gmail.com <</i>
+		</p2>
+	</footer>
 </body>
-<footer>
-	<br>
-	<p style="color: darkred">Sigueme en:</p>
-	<nav>
-		<ul>
-			<li><a href="https://www.facebook.com/eliezer.zuniga.12" target="_BLANK">Facebook</a></li>
-			<li><a href="https://www.instagram.com/_eandresnanjari/" target="_BLANK">Instagram</a></li>
-		</ul>
-	</nav>
-	<p style="color: darkred">Contactame a mi email: <i style="color: black">elizerittf@gmail.com</i></p>
-</footer>
 </html>

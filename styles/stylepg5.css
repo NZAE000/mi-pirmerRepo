@@ -1,28 +1,38 @@
 body{
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
 	background: #99ff9999;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 
 header{
+	display: flex;
+	flex-direction: column;
 	width: 100vw;
 	height: 10vh;
 	background-color: #00330c99;
 	opacity: 90%;
 }
 header a{
+	position: fixed;
+	align-self: flex-end;
+	margin-right: 1.5%;
+	margin-top: 1.5%;
 	font-size: 2em; 			/*1em = 16px 'en general' (dependiendo del navegador).*/
-	position: fixed; left: 1145px; top: 30px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 10px 5px #045, 3px 3px 10px 5px #045, 3px 3px 10px 5px #045;
-	color: #069;	
+	color: #0088cc;	
 	text-shadow: 2px 2px 5px #87ceeb;
 	transition: all 0.5s;
 }
 header a:hover{
+	color:#00aaff;
+	text-shadow: 2px 2px 5px #a8dbf0;
 	transform: scale(1.1);
 	transition: all 0.5s;
-	color:#004466;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -35,52 +45,47 @@ h1{
 /*--------------------------------------------------------------------------------------------------------------*/
 
 .noticia{
-	width: 95vw;
-	height: 105vh;
-	position:relative; left: 30px;
-	z-index: -1;
-	border: 1px solid #045;
+	display: grid;
+	height: 600px;
+	grid-template-rows: 5% 15% 80%;
+	margin: .5% 8%;
 	background: #d3f8d3;
+	border: 2px double #00aaff;
 }
-.noticia img{
-	position: relative; top: 8em; right: 1.5em;
-	float: right;
-	border-radius: .5em;
-	/*estilo(solid, dashed, double, groove, ridge, inset, outset)*/
-	border: 4px double #007a99;
-}
-.informacion h2{
-	position: absolute; left: 13em; top: 1.5em;
-	color: #007a99;
-	text-shadow: 3px 3px 15px #66e0ff;
-}
-.informacion p{
-	position: relative; top: 7em;
-	line-height: 2em;
-	width: 44%;
-	padding-left: 2em;
-	color: #045;
-}
-.salto{
-	position: absolute; left: 2.5em;
+.noticia .salto{
+	width: 11%;
+	margin-left: 1%;
+	margin-top: .5%;
+	text-decoration: none;
 	color: #006199;
 	transition: all 0.3s;
 }
-.salto:hover{
+.noticia .salto:hover{
 	transform: scale(1.112);
 	transition: all 0.3s;
 }
-
-
-/*-----------------------------------------------------------------------------------------------------------------*/
-
-.noticia img[src="../img/tokio.png"] {
-	width: 49%;
-	height: 50%;
+h2{
+	text-align: center;
+	color: #007a99;
+	text-shadow: 2px 2px 5px #66e0ff;
 }
-.noticia img[src="../img/ning.png"] {
-	width: 49%;
-	height: 50%;
+.informacion{
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+.informacion p{
+	margin: 0 5%;
+	line-height: 2em;
+	color: #045;
+}
+.informacion .img-info{
+	margin-right: 2%;
+	margin-top: 5%;
+}
+.img-info img{
+	border-radius: .5em;
+	/*estilo(solid, dashed, double, groove, ridge, inset, outset)*/
+	border: 4px double #007a99;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -92,12 +97,10 @@ footer{
 	height: 8.5vh;
 	opacity: 95%;
 }
-
 footer p1,p2{
 	line-height: 2;
 	color:gold;
 }
-
 #redes-sociales{
 	display: inline-block;
 	width: 34.5vw;
