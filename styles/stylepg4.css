@@ -48,21 +48,28 @@ h1{
 .table{
 	display: grid;
 	grid-template-rows: 30px repeat(4, 50px); /*la primera fila tendra 30px de espacio. Las demas son de 50px*/
-	grid-gap: 1px;
+	grid-gap: 2px;
 	margin: 0 25%;
 }
 .section, .data{
 	display: grid;
 	grid-template-columns: repeat(4, 180px);
-	grid-gap: 1px;
+	grid-gap: 2px;	
+
+}
+.section p, .data p{
+	text-align: center;
+	border: 2px solid #006699;
+	background: #00330c99;
+
 }
 .section p{
-	text-align: center;
-	border: 2px solid #0088cc;
+	padding-top: 2%;
+	color: #fff;
 }
 .data p{
-	text-align: center;
-	border: 2px solid #045;
+	padding-top: 8%;
+	color: #004466;
 }
 
 
