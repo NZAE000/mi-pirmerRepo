@@ -185,6 +185,11 @@
 									grid-gap: para separar cada una de las celdas(bordes) en filas y columnas del contenedor entre ellas.
 										grid-gap: 25px;
 
+									grid-auto-flow: controla cómo funciona el algoritmo de colocación automática, especificando exactamente cómo los elementos colocados automáticamente fluyen hacia la cuadrícula.
+										grid-auto-flow: row; Los elementos se colocan llenando cada fila por turno, agregando nuevas filas según sea necesario.
+										grid-auto-flow: column; Los elementos se colocan llenando cada columna por turno, agregando nuevas columnas según sea necesario.
+										grid-auto-dense: ;
+
 								*grid-item: todos lo elementos que estan adentro de un grid-container(los que existen, porque si la cuadricula es de 2x2 y solo existe un elemento por ej <h1>, habria solo un grid-items. El ersto sera grid-cell).
 									
 									grid-row-start: un elemento por defecto empiezan de tal linea de inicio en fila. Con esta propiedad se puede modificar de que linea en fila empieze tal item.
@@ -214,7 +219,26 @@
 								*grid-area: son areas que se seleccionan de forma consecutivas, es decir, por ej: seleccionamios un area de celdas de 3x3 o un conunto de 4x2 (siemopre consecutivas, es decir, formando figura cuadrada).
 
 								*grid-line: estan las row-lines y las colum-lines. Es decir las lineas en filas y en columnas son las que visualizan las celdas.
-*/																	
+
+								*GRID-IMPLICIT: Si uno o los elemento/s en el DOM no tienen un tamaño explicitado en grid-template-rows o colum, se crean filas o columnas implícitas en la grilla.
+
+									grid-auto-rows: especifíca el tamaño de las filas creadas de forma implícita (siempre que grid-auto-flow: row);
+									grid-auto-columns: especifíca el tamaño de las columnas creadas de forma implícita (siempre que grid-auto-flow: column);
+
+								*GRID-DINAMICOS(funciones):
+
+									minmax(): define un rango de tamaño mayor o igual que min y menor o igual que max.
+										grid-template-colum: repeat(3, minmax(100px, 250px)); (al encojer o estirar la ventana las cuadriculas encojeran hasta 100px y se estiraran hasta 250px).
+										grid-template-colum: repeat(3, minmax(min-content, 250px)); (al encojer la ventana, las cuadriculas en columnas se encojeran hasta su contenido).
+										grid-template-colum: repeat(3, minmax(100px, max-content)); (al estirar la ventana, las cuadriculas en columnas se estiraran hasta su contenido).
+
+									auto-fill: LLENA la fila con tantas columnas como pueda caber. Por lo tanto, crea columnas implícitas siempre que una nueva columna puede caber, porque está tratando de LLENAR la fila con tantas columnas como sea posible. Las columnas recién agregadas pueden estar vacías, pero seguirán ocupando un espacio designado en la fila.
+										grid-template-colum: repeat(autofill, minmax(100px, 1fr));
+
+									auto-fit: escala todos elementos;
+
+
+*/																		
 
 /**{ 							'*' selector universal, osea selecciona todos los elementos del html.
 	color: red;
