@@ -27,7 +27,7 @@
 								*BOX-MODEL:
 										-line-height: modifica el espacio vertical del texto.
 										-text-aling: posiciona el texto de un contenedor(center, left, right).
-
+						
 										-diplay:
 											inline: el elemento se renderizará en línea con otros elementos.
 											block: hace que el comportamiento del elemento sea como un bloque. Los elementos hijos en block se adecuan al tamaño de la caja del padre.
@@ -162,14 +162,14 @@
 									order: especifica el orden de un elemento flexible en relación con el resto de los elementos flexibles dentro del mismo contenedor (Es como el z-index, pero en vez del eje z es en direccion al main axis).
 										order: 1,2,3...; (Valor predeterminado 0. Especifica el orden del artículo flexible).
 
-								*grid:  El módulo de diseño de cuadrícula ofrece un sistema de diseño basado en cuadrículas, con filas y columnas, lo que facilita el diseño de páginas web sin tener que usar flotadores y posicionamiento.
+								*GRID: El módulo de diseño de cuadrícula ofrece un sistema de diseño basado en cuadrículas, con filas y columnas, lo que facilita el diseño de páginas web sin tener que usar flotadores y posicionamiento.
 
-								*grid-container: Para que un elemento HTML se comporte como un contenedor de cuadrícula (grillas), debe establecer la propiedad display grid o inline-grid. Hara que cambia la estructura de lo que contiene la caja o el contenedor.	
+								*GRID-container: Para que un elemento HTML se comporte como un contenedor de cuadrícula (grillas), debe establecer la propiedad display grid o inline-grid. Hara que cambia la estructura de lo que contiene la caja o el contenedor.	
 
 									display: grid; <- si el contenedor padre adquiere esta propiedad, sus hijos o items seran grid (grid-items: solo sus hijos directos).					
 									
 									grid-tamplate-rows: la cantidad de filas del contenedor de acuerdo a la cantidad de argumentos. Cada argumento tendra una medida, que es el espacio que ocupa cada una.
-										grid-tamplate-rows: 150px 150px 50px 1fr; hay 4 filas, las dos primeras ocupan 150px de espacio, la tercera 50px y la cuarta srea semidinamica, osea ocupara el espacio sobrante y a su vez es estirable.
+										grid-tamplate-rows: 150px 150px 50px 1fr; hay 4 filas, las dos primeras ocupan 150px de espacio, la tercera 50px y la cuarta sera semidinamica, osea ocupara el espacio sobrante y a su vez es estirable.
  										grid-tamplate-rows: repeat(3, 150px); Se le dice que se creen 3 filas, cada una de 150px de espacio.
 
 									grid-tamplate-colum: la casntida de columnas del contenedor de acuerdo a la cantida de argumentos. Cada argumento tendra una medida, que es el espacio que ocupa cada una..
@@ -190,7 +190,7 @@
 										grid-auto-flow: column; Los elementos se colocan llenando cada columna por turno, agregando nuevas columnas según sea necesario.
 										grid-auto-dense: ;
 
-								*grid-item: todos lo elementos que estan adentro de un grid-container(los que existen, porque si la cuadricula es de 2x2 y solo existe un elemento por ej <h1>, habria solo un grid-items. El ersto sera grid-cell).
+								*GRID-item: todos lo elementos que estan adentro de un grid-container(los que existen, porque si la cuadricula es de 2x2 y solo existe un elemento por ej <h1>, habria solo un grid-items. El resto sera grid-cell).
 									
 									grid-row-start: un elemento por defecto empiezan de tal linea de inicio en fila. Con esta propiedad se puede modificar de que linea en fila empieze tal item.
 										grid-row-start: 2; El elemento empezara desde la segunda linea en fila.
@@ -212,14 +212,6 @@
 										grid-colum: 2 / 4; tal elemetno empieza a ocupar desde la segunda linea hasta la cuarta linea en columna.
 										grid-row: 2 / span 4; con span se le dice: tal elemetno que empieze desde la linea 2 y que ocupe 4 columnas.
 
-								*grid-cell: son cada una de las celdas de cuatro lineas que conforman el grid-container.
-
-								*grid-tracks: estan los dos tipos: grid-row y grid-colum, osea el conjunto de celdas en filas o en columnas. El numero de tracks es el numero de filas + numero de columnas.
-
-								*grid-area: son areas que se seleccionan de forma consecutivas, es decir, por ej: seleccionamios un area de celdas de 3x3 o un conunto de 4x2 (siemopre consecutivas, es decir, formando figura cuadrada).
-
-								*grid-line: estan las row-lines y las colum-lines. Es decir las lineas en filas y en columnas son las que visualizan las celdas.
-
 								*GRID-IMPLICIT: Si uno o los elemento/s en el DOM no tienen un tamaño explicitado en grid-template-rows o colum, se crean filas o columnas implícitas en la grilla.
 
 									grid-auto-rows: especifíca el tamaño de las filas creadas de forma implícita (siempre que grid-auto-flow: row);
@@ -236,8 +228,107 @@
 										grid-template-colum: repeat(autofill, minmax(100px, 1fr));
 
 									auto-fit: escala todos elementos;
+								
+								*ALINIACIÓN PARA GRID-CONTEINER
 
+									justify-items: alinea los elementos de la cuadrícula a lo largo del eje de la fila (en línea). Específicamente, esta propiedad le permite establecer la alineación de los elementos dentro de un contenedor de cuadrícula (no la cuadrícula en sí) en una posición específica.
+										stretch; (default)
+										center;
+										start;
+										end;
+									align-items: alinea los elementos de la cuadrícula a lo largo del eje de la columna (en línea).;
+										stretch; (default)
+										center;
+										start;
+										end;
 
+								*ALINIACIÓN PARA GRID-FILAS-COLUMNAS
+									
+									align-content: alinea las filas;
+										center;
+										start;
+										end;
+										space-around;
+										space-between;
+										space-evenly;
+									justify-content: alinea las columnas;
+										center;
+										start;
+										end;
+										space-around;
+										space-between;
+										space-evenly;
+
+								*ALINIACIÓN PARA GRID-ITEMS
+
+									align-self: alinea algun elemento o elementos dentro en grid de manera vertical;
+										center;
+										start;
+										end;
+									justify-self: alinea algun elemento o elementos dentro en grid de manera horizontal;
+										center;
+										start;
+										end;
+									place-self: abreviacion para los dos anteriores;
+										place-self: end start; (al final en vertical y al inicio en horizontal)
+
+									order: especifica el orden de un elemento grid en relación con el resto de los elementos dentro del mismo contenedor grid (Es como el z-index, pero en vez del eje z es en direccion del contenedor).
+										order: 1,2,3...; (Valor predeterminado 0. Especifica el orden del artículo grid).
+								
+								*grid-area: son areas que se seleccionan de forma consecutivas, es decir, por ej: seleccionamios un area de celdas de 3x3 o un conunto de 4x2 (siemopre consecutivas, es decir, formando figura cuadrada).
+									grid-template-areas: se utiliza para dividir un contenerdor grilla en areas a traves de nombres.
+									ej:
+										grid-template-areas: "header header header"
+															 "aside main main"
+															 "aside main main"
+															 "footer footer footer"
+									grid-area: para indicarle a un elemento de un contenerdor grid a que area pertenece en grid-template-areas.
+									ej:
+										.my-header{
+											grid-area: header;
+										}
+								
+								*grid-line: estan las row-lines y las colum-lines. Es decir las lineas en filas y en columnas son las que visualizan las celdas. Se puede abarcar un area definida dandole nombres a la lineas.
+									ej:	
+										.grid-container{
+											display: grid;
+											grid-template-rows:n (tambien posible para las colums)
+												[first-line]	
+												150px
+												[second-line]
+												150px
+												[t-line]
+												150px
+												[f-line]
+												150px;
+										}										
+										luego..
+
+										.grid-item:first-child{ (elijo el primer hijo)
+											grid-row: first-line/t-line; (el primer hijo tendra una area desde la primera linea hasta la tercera, osea abarcara dos columnas de 150px)
+
+										}
+
+								*grid-cell: son cada una de las celdas de cuatro lineas que conforman el grid-container.
+
+								*grid-tracks: estan los dos tipos: grid-row y grid-colum, osea el conjunto de celdas en filas o en columnas. El numero de tracks es el numero de filas + numero de columnas.
+
+							*RESPONSIVE-DESIGN: Adaptar la pagina a distintos dispositivos: moviles, pc, tablets, etc. 
+
+								-Estructuras flexibles (contenedores flexibles, imagenes y videos flexibles)
+								-Media Queries:
+									@media: se usa en consultas de medios para aplicar diferentes estilos para diferenetes tipos / dispositivos de medios.
+									Los media Queries son condicionales:
+										SI EL..
+										_ancho y alto de la ventana gráfica 
+										_ancho y alto del dispositivo
+										_orientación (¿la tableta / telefono esta en modo vertical u horizontal?)
+										_resolución
+								-Hay 4 tipos de media Queries:
+										-all (apto para todos los dispositivos)
+										-print (destinado a material impreso  visualización de documentos en una pantalla en el modo de vista previa de impresión)
+										-screen (destinado principalmente a las pantallas)
+										-speech (destinado a sintetizadores de voz)
 */																		
 
 /**{ 							'*' selector universal, osea selecciona todos los elementos del html.
