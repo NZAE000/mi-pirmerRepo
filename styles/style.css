@@ -28,7 +28,7 @@
 										-line-height: modifica el espacio vertical del texto.
 										-text-aling: posiciona el texto de un contenedor(center, left, right).
 						
-										-diplay:
+										-display:
 											inline: el elemento se renderizará en línea con otros elementos.
 											block: hace que el comportamiento del elemento sea como un bloque. Los elementos hijos en block se adecuan al tamaño de la caja del padre.
 											inline-block: se redereiza en linea con otros elementos pero a su vez adquiere propiedades como establecer un ancho y alto en el elemento.
@@ -324,11 +324,25 @@
 										_ancho y alto del dispositivo
 										_orientación (¿la tableta / telefono esta en modo vertical u horizontal?)
 										_resolución
+
 								-Hay 4 tipos de media Queries:
 										-all (apto para todos los dispositivos)
 										-print (destinado a material impreso  visualización de documentos en una pantalla en el modo de vista previa de impresión)
 										-screen (destinado principalmente a las pantallas)
 										-speech (destinado a sintetizadores de voz)
+
+								-Operadores: OR | AND
+
+								-Orientacion: landscape(mas ancho que largo (escritorio)) y portrait(mas largo que ancho (móvil))
+
+								-METODOLOGIAS:
+
+										-MOBILE_FIRST
+										-DESKTOP_FIRST
+										-CONTENT_FIRST
+
+							*TRANSITION: ;
+
 */																		
 
 /**{ 							'*' selector universal, osea selecciona todos los elementos del html.
@@ -356,15 +370,18 @@ body{
 	display: flex; 
 	flex-direction: column; 		/*sus hijos directos(header y footer) se ordenearan en columnas.*/
 	background-color: #99ff9999;
+	background-image: url("../img/html.png");
+	background-repeat: no-repeat;
+	background-position: center;
 	width: 100vw;
 	min-height: 120vh;
 }
-body img[src="img/html.png"]{
+/*body img[src="img/html.png"]{
 	align-self: center;
 	padding-top: 12%;
 	position: absolute;
 	z-index: -1;
-}
+}*/
 /*---------------------------------------------------------------------------------------------------------------*/
 
 header{
@@ -395,21 +412,22 @@ header a:hover{
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h1{
+	margin-left: 2%;
 	font-size: 4.5em;
-	color:#045;
-	padding-left: 2%;
+	color: #006a9f;
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h2{	
-	margin: 3.5% 0;
-	padding-left: 2%;
+	margin: 4% 0;
 	font-size: 2.5em;
-	color: #045;
+	color: #006a9f;
+	align-self: center;
 }
 #Descripcion{
-	padding-left: 5%;
+	margin: 0 5%;
+	align-self: center;
 }
 #Descripcion p{
 	text-shadow: 3px 3px 5px #87ceeb, 2px 2px 5px #87ceeb, 2px 2px 5px #87ceeb;
@@ -429,24 +447,24 @@ h2{
 /*---------------------------------------------------------------------------------------------------------------*/
 
 h3{
-	margin-top: 5%;
-	padding-left: 5%;
+	text-align: center;
+	margin-top: 8%;
 	font-size: 25px; 
-	color: #055;
+	color: #0095df;
+	text-shadow: 1px 1px 1px #bfeaff;
 }
 nav{
+	align-self: center;
 	margin-top: 3%;
-	padding-left: 18%;
 }
 #lista_ejem{
 	display: flex;
-	flex-direction: column;
 	font-size: 16px;
 }
 .ejem__index{	
 	width: 200px;
 	height: 30px;
-	margin: .4% 0;
+	margin-left: 2%;
 	text-align: center;
 	padding-top: .4%;
 	border-radius: 3px;
@@ -521,4 +539,85 @@ footer p2 i{
 	color :#891010;
 	text-shadow: 1px 1px 3px pink;
 	font-family: Century Gothic;
+}
+
+@media screen and (max-width: 1220px){
+	h2{	
+		margin-top: 10%;
+		font-size: 2.5em;
+	}
+	h3{
+		font-size: 40px;
+		margin-top: 10%;
+	}
+	#lista_ejem{
+		flex-direction: column;
+	}
+	.ejem__index{
+		width: 330px;
+		height: 45px;
+		padding-top: 1%;
+		margin: 2% 0;
+		font-size: 1.5em; 
+	}
+}
+@media screen and (max-width: 700px){
+	header a{
+		font-size: 2em;
+	}
+	body{
+		background-size: 130%;
+	}
+	h1{
+		align-self: center;
+		margin-top: 15%;
+		font-size: 3.5em;
+	}
+	h2{	
+		margin-top: 8%;
+		font-size: 2.2em;
+	}
+	#Descripcion p{
+		font-size: 13px;
+	}
+	h3{
+		font-size: 30px;
+	}
+	.ejem__index{
+		width: 250px;
+		height: 30px;
+		font-size: 1.1em; 
+	}
+	#redes-sociales, footer p2{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 500px){
+	header a{
+		font-size: 2em;
+	}
+	h1{
+		margin: 18% 0;
+		font-size: 3em;
+	}
+	h2{	
+		margin-top: 10%;
+		font-size: 2em;
+	}
+	#Descripcion p{
+		font-size: 10px;
+	}
+	h3{
+		font-size: 25px;
+		margin-top: 12%;
+	}
+	.ejem__index{
+		width: 180px;
+		height: 20px;
+		font-size: .8em; 
+	}
+	#redes-sociales, footer p2{
+		align-self: center;
+		font-size: 12px;
+	}
 }
