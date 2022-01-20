@@ -81,15 +81,18 @@ aside{
 	align-self: flex-end;
 	bottom: 50%;
 	width: 100px;
-	height: 50px;
+	height: 90px;
 	padding-left: .5%;
-	border-top-left-radius: 25%;
-	border-bottom-left-radius: 25%;
+	border-top-left-radius: 40%;
+	border-bottom-left-radius: 40%;
 	box-shadow: -2px -2px 5px 2px  #00330c99;
-	transition: left 1s, width 1s;
+	transition: left 1s, width 2.5s, border-top-left-radius 2.5s, border-bottom-left-radius 2.5s;
 }
 aside:hover{
 	width: 350px;
+	height: 90px;
+	border-top-left-radius: 10%;
+	border-bottom-left-radius: 10%;
 	transition: left 1.5s, width 1.5s;
 }
 aside p{
@@ -98,6 +101,7 @@ aside p{
 	color: #00a2cc;
 	text-shadow: 2px 2px 7px #66ccff;
 	transition: opacity 1s, font-size 1s;
+	transition-delay: 1s;
 }
 aside:hover > p{
 	opacity: 0;
@@ -107,36 +111,37 @@ aside:hover > p{
 aside p1{
 	margin-top: 3%;
 	margin-left: 2%;
-	width: 0px;
-	height: 0px;
-	font-size: 1em;
-	color: #007a99;
+	font-size: 0em;
+	color: #00b2df;
 	text-shadow: 2px 2px 7px #66ccff;
 	overflow: hidden;
 	opacity: 0;
-	transition: opacity 3.5s;
+	transition: all 5s;
 }
 aside:hover > p1{
 	overflow: visible;
+	font-size: 1em;
 	opacity: 1;
-	width: 400px;
-	height: 600px;
 	transition: opacity 3.5s;
 }
-aside p1 a{
-	margin-left: 4%;
-	height: 0px;
-	font-size: 0.8em;
-	line-height: 1.3em;
-	color: gold;
-	text-shadow: 1px 1px 5px #ffe766;
+aside .Extra-instrumento{
+	display: flex;
+	justify-content: center;
 	opacity: 0;
-	transition: all 2.5s;
+	transition: all 3s;
 }
-aside p1 a:hover{
+aside .Extra-instrumento a{
+	opacity: 0;
+	transition: all 1s;
+}
+aside .Extra-instrumento:hover{
 	overflow: visible;
 	opacity: 1;
 	transition: all 4s;
+}
+aside .Extra-instrumento:hover > a{
+	color: #ffe140;
+	opacity: 1;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/

@@ -341,7 +341,75 @@
 										-DESKTOP_FIRST
 										-CONTENT_FIRST
 
-							*TRANSITION: ;
+							*TRANSITION:
+
+								transition-property: property/es - all - none;
+								transition-duration: duration (s);
+								transition-delay: delay (s);
+								transition-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int,start|end) | initial | inherit;
+								transition: ;
+
+							*ANIMATION: se definen con @KeyFrames "nombre" {}
+
+								animation-name: name;
+								animation-duration: duration (s);
+								animation-delay: delay (s);
+								animation-timing-function: (transition values);
+								animation-iteration-count: number;
+								animation-fill-mode: none | forwards | backwards | both | initial | inherit;
+								animation-direction: normal | reverse | alternate | alternate-reverse;
+
+								EJ:
+									.caja{
+										position: relative;
+										animation-name: desplazarse;
+										animation-duration: 3s;
+										animation-iteration-count: 3; (infinite para que se repita infinitamente)
+										animation-direction: normal;
+										animation-fill-mode: forwards; (caja adquiere las propiedades de la ultima instancia definida)
+									}
+									@KeyFrames desplazarse{
+										0% {
+											position: relative;
+											left: 0;
+											background: blue;
+										}
+										50% {
+											background: red;
+										}
+										100% {
+											left: 80%;											
+											background: white;
+										}
+									}
+							*CUBIC-BEZIER FUNCTION: funcion para transition-timing-function y animation-timing-function.
+									
+									animation-timing-function: cubic-bezier(x1, y1, x2, y2); (modifica la curva de velocidad)
+
+							*TRANSFORM:
+
+								transform:
+									-translateX(x) - translateY(y) - translate(x - x,y)
+									-scale(xy - x,y) - scaleX(x) - scaleY(y)
+									-rotate(angleUnit) - rotateX(angleUnit) - rotateZ(angleUnit) - rotate3D(angleUnit) | angleUnit = deg - grad - rad - turn
+									-skew(angleUnit);
+								Para que la caja adquiera otra formas se puede hacer con la propiedad:
+									clip-path: polygon(50% 0%, 0% 100%, 100% 100%); , etc..
+
+							*BACKGROUND:
+
+								background-color: color;
+								background-image: url();
+								background-size: x, y, auto, cover, contain;
+								background-repeat: no-repeat - repeat;
+								background-position: left top bottom right center;
+								background-attachmet: scroll | fixed | inherit;
+								background-clip: border-box | padding-box | content-box;
+								background-origin: 
+
+
+
+								
 
 */																		
 
@@ -512,7 +580,7 @@ footer p1{
 #redes-sociales{
 	align-self: flex-end;
 	padding-right: 1%;
-	/*z-index: -1; ya que redes-sociales es hijo de footer y se sobrepone en lac caja footer, z-index al decirle -1 se anula footer pasaria a interponer en su hijo.*/
+	/*z-index: -1; ya que redes-sociales es hijo de footer y se sobrepone en la caja footer, z-index al decirle -1 se anula footer pasaria a interponer en su hijo.*/
 }
 .contacto{
 	width: 80px;
